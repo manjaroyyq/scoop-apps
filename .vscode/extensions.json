@@ -5,6 +5,6 @@
         "ms-vscode.powershell-preview",
         "redhat.vscode-yaml",
         "usernamehw.errorlens",
-        "yzhang.markdown-all-in-one",
-    ],
+        "yzhang.markdown-all-in-one"
+    ]
 }
