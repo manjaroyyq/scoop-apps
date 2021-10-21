@@ -37,7 +37,6 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.
 
 # or shorter
 iwr -useb get.scoop.sh | iex
-
 ```
 
 ## 常用命令
