@@ -1,0 +1,27 @@
+{
+    "version": "0.47.1",
+    "description": "System utilities to maximize productivity.",
+    "homepage": "https://github.com/microsoft/PowerToys",
+    "license": "MIT",
+    "depends": "dotnet-sdk",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.47.1/PowerToysSetup-0.47.1-x64.exe#/setup.exe",
+            "hash": "e49b5aa3a5d6e215a66e7c325d21220c6b3846e4659eb90ed71ca9c430c5154f"
+        }
+    },
+    "installer": {
+        "args": "--silent"
+    },
+    "uninstaller": {
+        "script": "cmd /c ((Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Where-Object {$_.DisplayName -eq \"PowerToys (Preview)\"} | Select-Object -Expand UninstallString) -replace '/I','/x')"
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysSetup-$version-x64.exe#/setup.exe"
+            }
+        }
+    }
+}
