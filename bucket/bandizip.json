@@ -42,5 +42,9 @@
     },
     "bin": "Bandizip.exe",
     "shortcuts": [["Bandizip.exe", "Bandizip"]],
-    "persist": "Bandizip.ini"
+    "persist": "Bandizip.ini",
+    "notes": [
+        "注册专业版：运行 Bandizip.Patch.20201104.exe",
+        "添加右键菜单：regsvr32 bdzshl64(bdzshl32).dll"
+    ]
 }
