@@ -1,0 +1,26 @@
+{
+    "homepage": "http://internetdownloadmanager.com/index.html",
+    "description": "Internet Download Manager (IDM) is a tool to increase download speeds by up to 5 times, resume and schedule downloads.",
+    "version": "6.39.7",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://pan.jiemi.workers.dev/?file=/Public/scoop/IDM_6.39.7_Retail_Repack_Elchupacabra.zip",
+                "https://raw.githubusercontent.com/JaimeZeng/self-bucket/main/scripts/idm/install.bat",
+                "https://raw.githubusercontent.com/JaimeZeng/self-bucket/main/scripts/idm/uninstall.bat"
+            ],
+            "hash": [
+                "BB30CFE4B8ECA4F1C8802E6AACAF5396438F865EC9C71CFB4E2A7645500405A6",
+                "E313794A40720650971EB95FDB0279682E8F5F1C6FC230D2F5A095018ACCB1DC",
+                "773452D21D9E4B2829C5C6DD8CA649CF3F678381438224C5869D598E5FADC06B"
+            ]
+        }
+    },
+    "installer": {
+        "script": "& .\\install.bat"
+    },
+    "uninstaller": {
+        "script": "& .\\uninstall.bat"
+    }
+}
