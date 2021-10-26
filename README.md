@@ -1,4 +1,4 @@
-# Self-Bucket [![Build status](https://ci.appveyor.com/api/projects/status/uiry9brxin86drpi/branch/main?svg=true)](https://ci.appveyor.com/project/JaimeZeng/self-bucket/branch/main) [![Excavator](https://github.com/JaimeZeng/self-bucket/actions/workflows/schedule.yml/badge.svg)](https://github.com/JaimeZeng/self-bucket/actions/workflows/schedule.yml)
+# Self-Bucket [![Build status](https://ci.appveyor.com/api/projects/status/uiry9brxin86drpi/branch/main?svg=true)](https://ci.appveyor.com/project/JaimeZeng/self-bucket/branch/main) [![Excavator](https://github.com/JaimeZeng/self-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/JaimeZeng/self-bucket/actions/workflows/excavator.yml)
 
 ## Installation / 安装
 
