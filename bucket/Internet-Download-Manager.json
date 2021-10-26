@@ -7,20 +7,22 @@
         "64bit": {
             "url": [
                 "https://pan.jiemi.workers.dev/?file=/Public/scoop/IDM_6.39.7_Retail_Repack_Elchupacabra.zip",
-                "https://raw.githubusercontent.com/JaimeZeng/self-bucket/main/scripts/idm/install.bat",
-                "https://raw.githubusercontent.com/JaimeZeng/self-bucket/main/scripts/idm/uninstall.bat"
+                "https://pan.jiemi.workers.dev/?file=/Public/scoop/IDM/install.bat",
+                "https://pan.jiemi.workers.dev/?file=/Public/scoop/IDM/uninstall.bat"
             ],
             "hash": [
                 "BB30CFE4B8ECA4F1C8802E6AACAF5396438F865EC9C71CFB4E2A7645500405A6",
-                "9A481D38E5E3BA73CB71C169D5D43EE17C782E9848F0DEAD870FDEE255925E04",
-                "4A77EE11B888DF0E8864971FA561F837B7042F5C40541B218A10AC7759CD465C"
+                "A1241A8E35457B2D6A31B1CA493AEC75D6FD6DC5BD854610709176138E5BF68E",
+                "773452d21d9e4b2829c5c6dd8ca649cf3f678381438224c5869d598e5fadc06b"
             ]
         }
     },
     "installer": {
-        "script": "& .\\install.bat"
+        "script": "cmd.exe /c '.\\install.bat'"
     },
     "uninstaller": {
-        "script": "& .\\uninstall.bat"
-    }
+        "script": "cmd.exe /c '.\\uninstall.bat'"
+    },
+    "bin": "IDMan.exe",
+    "shortcuts": [["IDMan.exe", "Internet Download Manager"]]
 }

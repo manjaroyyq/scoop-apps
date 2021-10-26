@@ -44,5 +44,5 @@ If Not Exist "%Public%" Net Start idmtdi >NUL 2>NUL
 If Not Exist "%Public%" Rundll32 setupapi.dll,InstallHinfSection DefaultInstall 128 .\idmtdi.inf
 
 ::创建桌面快捷方式
-mshta VBScript:Execute("Set a=CreateObject(""WScript.Shell""):Set b=a.CreateShortcut(a.SpecialFolders(""Desktop"") & ""\Internet Download Manager.lnk""):b.TargetPath=""%~dp0IDMan.exe"":b.WorkingDirectory=""%~dp0"":b.Save:close")
+@REM mshta VBScript:Execute("Set a=CreateObject(""WScript.Shell""):Set b=a.CreateShortcut(a.SpecialFolders(""Desktop"") & ""\Internet Download Manager.lnk""):b.TargetPath=""%~dp0IDMan.exe"":b.WorkingDirectory=""%~dp0"":b.Save:close")
 ECHO.&ECHO 绿化完成，按任意键返回！
