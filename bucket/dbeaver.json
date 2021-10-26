@@ -4,11 +4,7 @@
     "homepage": "https://dbeaver.io",
     "license": "Apache-2.0",
     "suggest": {
-        "java": [
-            "java/oraclejdk",
-            "java/oraclejre8",
-            "java/openjdk11"
-        ]
+        "java": ["java/oraclejdk", "java/oraclejre8", "java/openjdk11"]
     },
     "architecture": {
         "64bit": {
@@ -17,16 +13,8 @@
         }
     },
     "extract_dir": "dbeaver",
-    "bin": [
-        "dbeaver.exe",
-        "dbeaver-cli.exe"
-    ],
-    "shortcuts": [
-        [
-            "dbeaver.exe",
-            "DBeaver"
-        ]
-    ],
+    "bin": ["dbeaver.exe", "dbeaver-cli.exe"],
+    "shortcuts": [["dbeaver.exe", "DBeaver"]],
     "checkver": {
         "url": "https://dbeaver.io/download/",
         "regex": "Community Edition ([\\d.]+)"
