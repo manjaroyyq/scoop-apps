@@ -1,0 +1,29 @@
+{
+    "version": "2.4.12",
+    "description": "A note taking and to-do application with synchronization capabilities",
+    "homepage": "https://joplinapp.org",
+    "license": "MIT",
+    "url": "https://github.com/laurent22/joplin/releases/download/v2.4.12/Joplin-Setup-2.4.12.exe#/dl.7z",
+    "hash": "sha512:2c40308681aabee4ce0d3ca5eaa92fc16fa0b6b91d20899ed626b87b640bd3a681e364f217e65b32dd4be5ca4082c87d181a85d702faf9b552c437c68a4deb0f",
+    "architecture": {
+        "64bit": {
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+        },
+        "32bit": {
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse",
+    "bin": "Joplin.exe",
+    "shortcuts": [["Joplin.exe", "Joplin"]],
+    "checkver": {
+        "github": "https://github.com/laurent22/joplin"
+    },
+    "autoupdate": {
+        "url": "https://github.com/laurent22/joplin/releases/download/v$version/Joplin-Setup-$version.exe#/dl.7z",
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
+    }
+}
