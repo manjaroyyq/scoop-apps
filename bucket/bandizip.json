@@ -9,42 +9,52 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://dl.bandisoft.com/bandizip.std/BANDIZIP-PORTABLE.ZIP",
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip/Bandizip.v7.xx.x64.Patch.20201104.exe",
+                "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip_Professional_v7.21_All_Portable.zip",
                 "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip/bdzshl.x64.dll"
             ],
             "hash": [
-                "cac94cd35840817b75a79e7eee7663878c8bc5f604a3b2797cd372563b0148b9",
-                "A4EE6DB8B2DBCA768ED566336810C789362B9B53A6F0ED1942412886F997DC81",
+                "cda8edc92f4689650906abcccb5fc5645fc9fec3fd79252d5e663a6a5317dd65",
                 "6CBEECC2600E3C964B00164880E577AFD55F7BCB3A1B96099C7B1829840A239F"
             ],
-            "pre_install": "Rename-Item \"$dir\\Bandizip.x64.exe\" 'Bandizip.exe'"
+            "pre_install": "Rename-Item \"$dir\\Bandizip.x64.exe\" 'Bandizip.exe'",
+            "installer": {
+                "script": [
+                    "Get-ChildItem \"$dir\\Bandizip.x*.exe\" | Remove-Item",
+                    "if (!(Test-Path \"$persist_dir\\Bandizip.ini\")) { New-Item \"$dir\\Bandizip.ini\" | Out-Null }",
+                    "regsvr32 /s \"$dir\\bdzshl.x64.dll\""
+                ]
+            },
+            "uninstaller": {
+                "script": "regsvr32 /s /u \"$dir\\bdzshl.x64.dll\""
+            }
         },
         "32bit": {
             "url": [
-                "https://dl.bandisoft.com/bandizip.std/BANDIZIP-PORTABLE.ZIP",
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip/Bandizip.v7.xx.x32.Patch.20201104.exe",
+                "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip_Professional_v7.21_All_Portable.zip",
                 "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip/bdzshl.x86.dll"
             ],
             "hash": [
-                "cac94cd35840817b75a79e7eee7663878c8bc5f604a3b2797cd372563b0148b9",
-                "E407833CEE189F2A242D5A225E308C52A5E46B601E04E6A231A7203BB5BB5809",
+                "cda8edc92f4689650906abcccb5fc5645fc9fec3fd79252d5e663a6a5317dd65",
                 "148AE610B55AA53C2BCC37FC71AC5FF670A25C9F50D869A6FC54F4B36E591425"
             ],
-            "pre_install": "Rename-Item \"$dir\\Bandizip.x86.exe\" 'Bandizip.exe'"
+            "pre_install": "Rename-Item \"$dir\\Bandizip.x86.exe\" 'Bandizip.exe'",
+            "installer": {
+                "script": [
+                    "Get-ChildItem \"$dir\\Bandizip.x*.exe\" | Remove-Item",
+                    "if (!(Test-Path \"$persist_dir\\Bandizip.ini\")) { New-Item \"$dir\\Bandizip.ini\" | Out-Null }",
+                    "regsvr32 /s \"$dir\\bdzshl.x86.dll\""
+                ]
+            },
+            "uninstaller": {
+                "script": "regsvr32 /s /u \"$dir\\bdzshl.x86.dll\""
+            }
         }
-    },
-    "installer": {
-        "script": [
-            "Get-ChildItem \"$dir\\Bandizip.x*.exe\" | Remove-Item",
-            "if (!(Test-Path \"$persist_dir\\Bandizip.ini\")) { New-Item \"$dir\\Bandizip.ini\" | Out-Null }"
-        ]
     },
     "bin": "Bandizip.exe",
     "shortcuts": [["Bandizip.exe", "Bandizip"]],
     "persist": "Bandizip.ini",
     "notes": [
-        "注册专业版：运行 Bandizip.Patch.20201104.exe",
-        "添加右键菜单：regsvr32 bdzshl64(bdzshl32).dll"
+        "更新地址: https://www.423down.com/9735.html",
+        "使用 scoop uninstall bandizip 卸载会提示文件正在使用，需要重启系统后再次执行才能完全卸载"
     ]
 }
