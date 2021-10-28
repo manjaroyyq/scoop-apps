@@ -1,7 +1,7 @@
 {
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
-    "license": "Freeware",
+    "license": "Unknown",
     "version": "2.1.0",
     "architecture": {
         "64bit": {
@@ -20,18 +20,33 @@
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall uTools.exe\" -Force -Recurse",
-    "shortcuts": [["uTools.exe", "uTools"]],
+    "shortcuts": [
+        [
+            "uTools.exe",
+            "uTools"
+        ]
+    ],
     "checkver": {
-        "url": "https://u.tools/",
-        "regex": "uTools-([\\d.]+).exe"
+        "url": "https://publish.u-tools.cn/version2/latest.yml?",
+        "regex": "version: ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://publish.u-tools.cn/version2/uTools-$version.exe#/dl.7z"
+                "url": "https://publish.u-tools.cn/version2/uTools-$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://publish.u-tools.cn/version2/latest.yml?",
+                    "mode": "extract",
+                    "regex": "(?sm)$version.exe.*?sha512: $base64"
+                }
             },
             "32bit": {
-                "url": "https://publish.u-tools.cn/version2/uTools-$version-ia32.exe#/dl.7z"
+                "url": "https://publish.u-tools.cn/version2/uTools-$version-ia32.exe#/dl.7z",
+                "hash": {
+                    "url": "https://publish.u-tools.cn/version2/latest-ia32.yml?",
+                    "mode": "extract",
+                    "regex": "(?sm)$version-ia32.exe.*?sha512: $base64"
+                }
             }
         }
     }
