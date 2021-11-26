@@ -1,0 +1,34 @@
+{
+    "version": "0.35.1",
+    "description": "This is SARASA GOTHIC, a CJK programming font based on Iosevka and Source Han Sans.",
+    "homepage": "https://github.com/be5invis/Sarasa-Gothic",
+    "license": {
+        "identifier": "OFL-1.1 License",
+        "url": "https://github.com/be5invis/Sarasa-Gothic/blob/master/LICENSE" // Whenever possible attach a program specific URL, otherwise do not use
+    },
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.35.1/sarasa-gothic-ttf-0.35.1.7z",
+    "hash": "aa01e5239df6343af2a049707518486112c1a9cad9363e0148f8cf8e00201a57",
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter 'sarasa*.ttf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter 'sarasa*.ttf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The 'Sarasa Gothic' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z"
+    }
+}
