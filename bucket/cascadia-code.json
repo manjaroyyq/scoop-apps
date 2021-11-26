@@ -6,6 +6,8 @@
         "identifier": "OFL-1.1 License",
         "url": "https://github.com/microsoft/cascadia-code/blob/main/LICENSE" // Whenever possible attach a program specific URL, otherwise do not use
     },
+    "notes": "You may need to restart the system to use recently installed fonts.",
+    "depends": "sudo",
     "url": "https://github.com/microsoft/cascadia-code/releases/download/v2110.31/CascadiaCode-2110.31.zip",
     "hash": "b1a18b6b15818f5e5467f06363c963d7f373f26c41910284943076c064756fac",
     "installer": {

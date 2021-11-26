@@ -6,6 +6,8 @@
         "identifier": "OFL-1.1 License",
         "url": "https://github.com/adobe-fonts/source-code-pro/blob/release/LICENSE.md" // Whenever possible attach a program specific URL, otherwise do not use
     },
+    "notes": "You may need to restart the system to use recently installed fonts.",
+    "depends": "sudo",
     "url": "https://github.com/adobe-fonts/source-code-pro/releases/download/2.038R-ro%2F1.058R-it%2F1.018R-VAR/TTF-source-code-pro-2.038R-ro-1.058R-it.zip",
     "hash": "478028ec70adc1ff73848a546c3ad266716a0096cd1f1a1ef18aeff0199d5996",
     "installer": {

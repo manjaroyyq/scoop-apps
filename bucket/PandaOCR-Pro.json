@@ -1,0 +1,23 @@
+{
+    "version": "5.36",
+    "description": "多功能多引擎OCR图文识别、翻译、朗读、游戏机翻汉化工具",
+    "homepage": "https://github.com/miaomiaosoft/PandaOCR.Pro",
+    "license": "Freeware",
+    "notes": [
+        "使用教程 <https://support.qq.com/products/322047/faqs-more#classifyId=59199>",
+        "问题反馈 <https://github.com/miaomiaosoft/PandaOCR.Pro/issues>"
+    ],
+    "url": "https://github.com/miaomiaosoft/PandaOCR.Pro/releases/download/5.36/PandaOCR.Pro_5.36.zip",
+    "hash": "3c9ccf16a73ad3d84e1bf1cd442f86bfd75a7182a3625b521f18e13019ba6194",
+    "bin": "PandaOCR.Pro.exe",
+    "shortcuts": [
+        [
+            "PandaOCR.Pro.exe",
+            "PandaOCR Pro"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/miaomiaosoft/PandaOCR.Pro/releases/download/$version/PandaOCR.Pro_$version.zip"
+    }
+}

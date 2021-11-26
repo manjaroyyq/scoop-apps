@@ -6,6 +6,8 @@
         "identifier": "OFL-1.1 License",
         "url": "https://github.com/be5invis/Sarasa-Gothic/blob/master/LICENSE" // Whenever possible attach a program specific URL, otherwise do not use
     },
+    "notes": "You may need to restart the system to use recently installed fonts.",
+    "depends": "sudo",
     "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.35.1/sarasa-gothic-ttf-0.35.1.7z",
     "hash": "aa01e5239df6343af2a049707518486112c1a9cad9363e0148f8cf8e00201a57",
     "installer": {
