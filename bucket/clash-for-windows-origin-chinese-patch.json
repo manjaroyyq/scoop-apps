@@ -1,0 +1,27 @@
+{
+    "version": "0.18.9",
+    "description": "Clash for Windows 原版简体中文翻译补丁。",
+    "homepage": "https://github.com/BoyceLig/Clash_Chinese_Patch",
+    "license": "Unknown",
+    "notes": [
+        "此版本是原版汉化，未删减版本",
+        "软件仅供学习，24小时内删除"
+    ],
+    "depends": "clash-for-windows",
+    "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.18.9/app.Original.Chinese.version.7z",
+    "hash": "4f56c2dcbde77f009670833accf7db799c8b731757a7a149f4358f70afbbf3af",
+    "post_install": [
+        "Move-Item \"$(scoop prefix clash-for-windows)\\resources\\app.asar\" \"$(scoop prefix clash-for-windows)\\resources\\app.asar.bak\"",
+        "Copy-Item \"$dir\\app.asar\" \"$(scoop prefix clash-for-windows)\\resources\""
+    ],
+    "uninstaller": {
+        "script": [
+            "Remove-Item \"$(scoop prefix clash-for-windows)\\resources\\app.asar\"",
+            "Move-Item \"$(scoop prefix clash-for-windows)\\resources\\app.asar.bak\" \"$(scoop prefix clash-for-windows)\\resources\\app.asar\""
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/$version/app.Original.Chinese.version.7z"
+    }
+}
