@@ -11,13 +11,13 @@
     "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.18.10/app.Original.Chinese.version.7z",
     "hash": "e5efc77844add61afdd285e7a3cc4e8d1216af7f4e3c0f452410aa939125e33f",
     "post_install": [
-        "Move-Item \"$(scoop prefix clash-for-windows)\\resources\\app.asar\" \"$(scoop prefix clash-for-windows)\\resources\\app.asar.bak\"",
-        "Copy-Item \"$dir\\app.asar\" \"$(scoop prefix clash-for-windows)\\resources\""
+        "Move-Item \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar\" \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar.bak\"",
+        "Copy-Item \"$dir\\app.asar\" \"$(scoop prefix clash-for-windows-np)\\resources\""
     ],
     "uninstaller": {
         "script": [
-            "Remove-Item \"$(scoop prefix clash-for-windows)\\resources\\app.asar\"",
-            "Move-Item \"$(scoop prefix clash-for-windows)\\resources\\app.asar.bak\" \"$(scoop prefix clash-for-windows)\\resources\\app.asar\""
+            "Remove-Item \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar\"",
+            "Move-Item \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar.bak\" \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar\""
         ]
     },
     "checkver": "github",
