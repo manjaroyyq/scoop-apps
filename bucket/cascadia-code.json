@@ -2,10 +2,7 @@
     "version": "2110.31",
     "description": "This is a fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Windows Terminal.",
     "homepage": "https://github.com/microsoft/cascadia-code",
-    "license": {
-        "identifier": "OFL-1.1 License",
-        "url": "https://github.com/microsoft/cascadia-code/blob/main/LICENSE" // Whenever possible attach a program specific URL, otherwise do not use
-    },
+    "license": "SIL Open Font License",
     "notes": "You may need to restart the system to use recently installed fonts.",
     "depends": "sudo",
     "url": "https://github.com/microsoft/cascadia-code/releases/download/v2110.31/CascadiaCode-2110.31.zip",
