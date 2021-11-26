@@ -1,9 +1,9 @@
-# Self-Bucket [![Build status](https://ci.appveyor.com/api/projects/status/uiry9brxin86drpi/branch/main?svg=true)](https://ci.appveyor.com/project/JaimeZeng/self-bucket/branch/main) [![Excavator](https://github.com/JaimeZeng/self-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/JaimeZeng/self-bucket/actions/workflows/excavator.yml)
+# scoop-apps [![Build status](https://ci.appveyor.com/api/projects/status/a2rk8k3j8xm0neev/branch/main?svg=true)](https://ci.appveyor.com/project/JaimeZeng/scoop-apps/branch/main) [![Excavator](https://github.com/JaimeZeng/scoop-apps/actions/workflows/excavator.yml/badge.svg)](https://github.com/JaimeZeng/scoop-apps/actions/workflows/excavator.yml)
 
 ## Installation / 安装
 
 ```powershell
-scoop bucket add self https://github.com/JaimeZeng/self-bucket
+scoop bucket add sapps https://github.com/JaimeZeng/scoop-apps
 scoop update
 ```
 
@@ -14,11 +14,11 @@ All manifests can be listed with:
 ```powershell
 scoop install scoop-completion
 scoop install scoop-search
-scoop-search self/<app_name>
+scoop-search sapps/<app_name>
 ```
 
 Install apps from this bucket with:
 
 ```powershell
-scoop install self/<app_name>
+scoop install sapps/<app_name>
 ```
