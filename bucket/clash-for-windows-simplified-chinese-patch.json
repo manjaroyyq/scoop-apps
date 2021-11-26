@@ -1,15 +1,15 @@
 {
     "version": "0.18.9",
-    "description": "Clash for Windows 原版简体中文翻译补丁。",
+    "description": "Clash for Windows 精简版简体中文翻译补丁。",
     "homepage": "https://github.com/BoyceLig/Clash_Chinese_Patch",
     "license": "Unknown",
     "notes": [
-        "此版本是原版汉化，未删减版本",
+        "此版本是精简版汉化，为了减小包体删除了不必要的文件",
         "软件仅供学习，24小时内删除"
     ],
     "depends": "clash-for-windows-np",
-    "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.18.9/app.Original.Chinese.version.7z",
-    "hash": "4f56c2dcbde77f009670833accf7db799c8b731757a7a149f4358f70afbbf3af",
+    "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.18.9/app.Simplified.Chinese.version.7z",
+    "hash": "ccc39835d001ff90ff0f9b7c9e71cc11cb66e0994e85138e13b341f0052b89f8",
     "post_install": [
         "Move-Item \"$(scoop prefix clash-for-windows)\\resources\\app.asar\" \"$(scoop prefix clash-for-windows)\\resources\\app.asar.bak\"",
         "Copy-Item \"$dir\\app.asar\" \"$(scoop prefix clash-for-windows)\\resources\""
@@ -22,6 +22,6 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/$version/app.Original.Chinese.version.7z"
+        "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/$version/app.Simplified.Chinese.version.7z"
     }
 }
