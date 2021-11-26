@@ -1,0 +1,34 @@
+{
+    "version": "2110.31",
+    "description": "This is a fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Windows Terminal.",
+    "homepage": "https://github.com/microsoft/cascadia-code",
+    "license": {
+        "identifier": "OFL-1.1 License",
+        "url": "https://github.com/microsoft/cascadia-code/blob/main/LICENSE" // Whenever possible attach a program specific URL, otherwise do not use
+    },
+    "url": "https://github.com/microsoft/cascadia-code/releases/download/v2110.31/CascadiaCode-2110.31.zip",
+    "hash": "b1a18b6b15818f5e5467f06363c963d7f373f26c41910284943076c064756fac",
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "Get-ChildItem \"$dir\\ttf\" -filter '*.ttf' | ForEach-Object {",
+            "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "    Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem \"$dir\\ttf\" -filter '*.ttf' | ForEach-Object {",
+            "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The '$app' font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/microsoft/cascadia-code/releases/download/v$version/CascadiaCode-$version.zip"
+    }
+}
