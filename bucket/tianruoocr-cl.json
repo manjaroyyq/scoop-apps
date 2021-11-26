@@ -1,0 +1,29 @@
+{
+    "version": "1.2.6",
+    "description": "天若 ocr 开源版本的本地版，采用 Chinese-lite 和 paddleocr 识别框架",
+    "homepage": "https://gitee.com/wanglifree/tianruoocr-cl",
+    "license": "GNU General Public License v3.0",
+    "notes": [
+        "如果出现 Exception from HRESULT: 0x8007007E 可以使用 DirectX Repair 进行修复，一般能够启动",
+        "问题反馈 <https://gitee.com/wanglifree/tianruoocr-cl/issues>"
+    ],
+    "url": "https://gitee.com/wanglifree/tianruoocr-cl/attach_files/892107/download/天若OCR开源版本地版V1.2.6.zip",
+    "hash": "d7a4836644069b43ecff506db4e1df30f71ab2d5e4ce0ece948523508b6e3264",
+    "extract_dir": "天若OCR开源版本地版",
+    "bin": "天若OCR文字识别.exe",
+    "shortcuts": [
+        [
+            "天若OCR文字识别.exe",
+            "天若 OCR 文字识别"
+        ]
+    ],
+    "checkver": {
+        "url": "https://gitee.com/api/v5/repos/wanglifree/tianruoocr-cl/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/tianruoocr-cl-v$version.zip",
+        "extract_dir": "天若OCR开源版本地版"
+    }
+}
