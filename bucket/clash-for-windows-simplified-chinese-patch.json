@@ -7,17 +7,26 @@
         "此版本是精简版汉化，为了减小包体删除了不必要的文件",
         "软件仅供学习，24小时内删除"
     ],
-    "depends": "clash-for-windows-np",
+    "depends": "sapps/clash-for-windows-np",
     "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.18.10/app.Simplified.Chinese.version.7z",
     "hash": "bcd8e025a216ce6aa80f5a107ce8dcfc73d922f5f7c72f0da302c656c3c61811",
-    "post_install": [
-        "Move-Item \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar\" \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar.bak\"",
-        "Copy-Item \"$dir\\app.asar\" \"$(scoop prefix clash-for-windows-np)\\resources\""
-    ],
+    "installer": {
+        "script": [
+            "Get-Process clash* | Stop-Process",
+            "Get-ChildItem $dir -Exclude install.json,manifest.json | ForEach-Object {",
+            "  Get-ChildItem \"$(scoop prefix clash-for-windows-np)\\resources\\$($_.Name)\" | Rename-Item -NewName { $_.Name + \".sappsbak\" }",
+            "  Copy-Item $_.FullName -destination \"$(scoop prefix clash-for-windows-np)\\resources\" -Force",
+            "}"
+        ]
+    },
     "uninstaller": {
         "script": [
-            "Remove-Item \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar\"",
-            "Move-Item \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar.bak\" \"$(scoop prefix clash-for-windows-np)\\resources\\app.asar\""
+            "Get-Process clash* | Stop-Process",
+            "Get-ChildItem \"$dir\" -Exclude install.json,manifest.json | ForEach-Object {",
+            "  Remove-Item \"$(scoop prefix clash-for-windows-np)\\resources\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "  Get-ChildItem \"$(scoop prefix clash-for-windows-np)\\resources\\$($_.Name).sappsbak\" | Rename-Item -NewName { $_.Name -replace '.sappsbak','' }",
+            "}",
+            "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
         ]
     },
     "checkver": "github",
