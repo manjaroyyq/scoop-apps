@@ -1,0 +1,66 @@
+{
+    "version": "97.0.4692.20",
+    "description": "Fast, secure, and free web browser, built for the modern web(Dev, Portable Edition).",
+    "homepage": "https://www.google.com/chrome/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.google.com/chrome/privacy/eula_text.html"
+    },
+    "notes": "Chromium内核浏览器实验室功能特性运行参数：<https://peter.sh/experiments/chromium-command-line-switches>",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.google.com/release2/chrome/mi2ty7kypxfeaycrcfqpdiqjtm_97.0.4692.20/97.0.4692.20_chrome_installer.exe#/dl.7z",
+            "hash": "bbfa72c3b8796c313d8fb97f96e293fe1b9d3b2948f9eccd2f6d68cdae5167eb"
+        },
+        "32bit": {
+            "url": "https://dl.google.com/release2/chrome/m3znipyvpvzjc2gnpiuywqpbla_97.0.4692.20/97.0.4692.20_chrome_installer.exe#/dl.7z",
+            "hash": "fe3d8422f5e813e1c9f6b3f9d1567a42cf92070937a96bf4e70a1bd42733f313"
+        }
+    },
+    "pre_install": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
+    "bin": [
+        [
+            "chrome.exe",
+            "chrome-dev",
+            "--user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --no-first-run --enable-ftp --enable-gpu-rasterization --enable-leak-detection --enable-potentially-annoying-security-features --disable-component-update --disable-crash-reporter --disable-breakpad --disable-background-networking --disable-logging --disable-notifications --no-report-upload --print-to-pdf-no-header --save-page-as-mhtml --site-per-process --crash-server-url=\"0.0.0.0\" --force-update-remote-url=\"0.0.0.0\" --google-url=\"0.0.0.0\" --trace-upload-url=\"0.0.0.0\""
+        ],
+        [
+            "chrome.exe",
+            "google-chrome-dev",
+            "--user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --no-first-run --enable-ftp --enable-gpu-rasterization --enable-leak-detection --enable-potentially-annoying-security-features --disable-component-update --disable-crash-reporter --disable-breakpad --disable-background-networking --disable-logging --disable-notifications --no-report-upload --print-to-pdf-no-header --save-page-as-mhtml --site-per-process --crash-server-url=\"0.0.0.0\" --force-update-remote-url=\"0.0.0.0\" --google-url=\"0.0.0.0\" --trace-upload-url=\"0.0.0.0\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "chrome.exe",
+            "Google Chrome Dev",
+            "--user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --no-first-run --enable-ftp --enable-gpu-rasterization --enable-leak-detection --enable-potentially-annoying-security-features --disable-component-update --disable-crash-reporter --disable-breakpad --disable-background-networking --disable-logging --disable-notifications --no-report-upload --print-to-pdf-no-header --save-page-as-mhtml --site-per-process --crash-server-url=\"0.0.0.0\" --force-update-remote-url=\"0.0.0.0\" --google-url=\"0.0.0.0\" --trace-upload-url=\"0.0.0.0\""
+        ]
+    ],
+    "persist": [
+        "Data",
+        "Cache"
+    ],
+    "checkver": {
+        "url": "https://api.pzhacm.org/iivb/cu.json",
+        "regex": "(?sm)Dev.+x86.+release2/chrome/(?<32>[\\w-]+)_(?<version>[\\d.]+).+x64.+release2/chrome/(?<64>[\\w-]+)_.+Canary"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.google.com/release2/chrome/$match64_$version/$version_chrome_installer.exe#/dl.7z",
+                "hash": {
+                    "url": "https://api.pzhacm.org/iivb/cu.json",
+                    "jsonpath": "$.Dev.x64.sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://dl.google.com/release2/chrome/$match32_$version/$version_chrome_installer.exe#/dl.7z",
+                "hash": {
+                    "url": "https://api.pzhacm.org/iivb/cu.json",
+                    "jsonpath": "$.Dev.x86.sha256"
+                }
+            }
+        }
+    }
+}
