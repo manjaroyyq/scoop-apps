@@ -2,25 +2,19 @@
     "potplayer": {
         "name": "PotPlayer",
         "version": "211118",
-        "build": "1.7.21566",
-        "date": "2021-11-25",
         "sha256hash": "c3b85074cea05975adc72c4608c7d0de38ff45d0b70f0da325d8ea7fc910bb6e",
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/%E3%80%902021-11-25%E3%80%91Pot_Player64_v211118(1.7.21566)_Public.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player64_v211118(1.7.21566)_Public_211125.7z"
     },
     "potplayer-skin-modernwin10-chs": {
         "name": "PotPlayer 皮肤 ModernW10 汉化版",
         "version": "3.6",
-        "build": "211101",
-        "date": "2021-11-01",
         "sha256hash": "b81c0b89f9b447e429d6c7bd851dcc07ba570c1d3d82fc6b951836d3c94b2eec",
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player%E7%9A%AE%E8%82%A4%EF%BC%9AModernW10_v3.6_%E6%B1%89%E5%8C%96%E7%89%88_211101.zip"
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player_skin_ModernW10_v3.6_chs_211101.zip"
     },
     "potplayer-skin-xmp5_withoutframe_fix": {
         "name": "PotPlayer 皮肤 XMP5_WithoutFrame_Fix",
-        "version": "2021813",
-        "build": "5.0",
-        "date": "2021-08-13",
+        "version": "210813",
         "sha256hash": "d6cc220ac1993ba357a3dfd27039fc48b759329c86d722db79bddabe9a157c93",
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player%E7%9A%AE%E8%82%A4%EF%BC%9AXMP5%20WithoutFrame_Fix.zip"
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player_skin_XMP5_WithoutFrame_Fix.zip"
     }
 }
