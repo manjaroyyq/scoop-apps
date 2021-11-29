@@ -8,7 +8,7 @@
     "potplayer-skin-modernwin10": {
         "name": "Modern W10 Skin for PotPlayer ITA-ENG",
         "version": "211117",
-        "sha256hash": "08F9DE75122C7152ECB65B15936208230D93E815502D1C350AFE67C2A308BE83",
+        "sha256hash": "08f9de75122c7152ecb65b15936208230d93e815502d1c350afe67c2a308be83",
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player_skin_ModernW10_211117_ita_eng.zip"
     },
     "potplayer-skin-modernwin10-chs": {
@@ -22,5 +22,17 @@
         "version": "210813",
         "sha256hash": "d6cc220ac1993ba357a3dfd27039fc48b759329c86d722db79bddabe9a157c93",
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player_skin_XMP5_WithoutFrame_Fix.zip"
+    },
+    "xftp": {
+        "name": "Xftp",
+        "version": "7.0.0088",
+        "sha256hash": "19d3475214c26a07af073e98817ff7a1cfcc477ec8f0582eb10fc8cb53579d22",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Xshell/Xftp_v7.0.0088.7z"
+    },
+    "xshell": {
+        "name": "Xshell",
+        "version": "7.0.0090",
+        "sha256hash": "7ca91bba564b6aea2b9eb5d00229e9bba915816bc4595938f59dae0dc9369833",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Xshell/Xshell_v7.0.0090.7z"
     }
 }
