@@ -53,7 +53,11 @@
         ]
     ],
     "persist": "data",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/mishamosher/RL-WSL/releases/latest",
+        "regex": "(?s)(?<tag>href=\"/mishamosher/RL-WSL/releases/tag/(?<version>[\\d.-]+))",
+        "replace": "${version}"
+    },
     "autoupdate": {
         "url": "https://github.com/mishamosher/RL-WSL/releases/download/$version/RL8.zip"
     }
