@@ -23,17 +23,17 @@
         "sha256hash": "d6cc220ac1993ba357a3dfd27039fc48b759329c86d722db79bddabe9a157c93",
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player_skin_XMP5_WithoutFrame_Fix.zip"
     },
-    "typora-beta-64bit": {
-        "name": "A decent markdown editor finally available on Windows(Beta, 64-bit versions)",
-        "version": "0.11.18",
-        "sha256hash": "51ddc37ddac94eeb0d92d0fef6fea02cf9339628472c9ddf7c3e13a7694be738",
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora-update-ia32-1117.exe"
-    },
     "typora-beta-32bit": {
         "name": "A decent markdown editor finally available on Windows(Beta, 32-bit versions)",
         "version": "0.11.18",
         "sha256hash": "4784a2fa4e4c1918647cf12f3945c70dc281aa2f587326af7e16fb4c5f981915",
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora-update-x64-1117.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora_0.11.18_ia32_1117.exe"
+    },
+    "typora-beta-64bit": {
+        "name": "A decent markdown editor finally available on Windows(Beta, 64-bit versions)",
+        "version": "0.11.18",
+        "sha256hash": "51ddc37ddac94eeb0d92d0fef6fea02cf9339628472c9ddf7c3e13a7694be738",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora_0.11.18_x64_1117.exe"
     },
     "xftp": {
         "name": "Xftp",
