@@ -1,12 +1,12 @@
 {
-    "version": "6",
+    "version": "6.1",
     "description": "Free monospaced font with programming ligatures.",
     "homepage": "https://github.com/tonsky/FiraCode",
     "license": "SIL Open Font License",
     "notes": "You may need to restart the system to use recently installed fonts.",
     "depends": "sudo",
-    "url": "https://github.com/tonsky/FiraCode/releases/download/6/Fira_Code_v6.zip",
-    "hash": "a4997c2f905fb20a6d814baf7b9bab7df7de574a8e87d6af509685a43291caf1",
+    "url": "https://github.com/tonsky/FiraCode/releases/download/6.1/Fira_Code_v6.1.zip",
+    "hash": "0fca4e7393a0dfb7b975cb2738d5cab5eac87222c900f127a135ad856afc95cc",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
