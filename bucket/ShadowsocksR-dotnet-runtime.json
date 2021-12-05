@@ -33,7 +33,7 @@
         },
         "hash": {
             "url": "https://github.com/HMBSbige/ShadowsocksR-Windows/releases",
-            "find": "(?s)$basename.*?$sha256"
+            "regex": "(?s)$basename.*?$sha256"
         }
     }
 }
