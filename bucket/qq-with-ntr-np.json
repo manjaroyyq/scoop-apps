@@ -30,7 +30,9 @@
         "⑤ 安装时如有提示文件占用无法继续，调出任务管理器，查找并结束 QQ.exe、QQExternal.exe、TXPlatform.exe 等相关进程一般就能重试继续，不行就看看其他腾讯类软件都开了些啥，比如：腾讯电脑管家、小 Q 书桌，都关了再安装试试",
         "⑥ 本地普通会员 <VIP> 的功能，经几个网友和我自己测试发现，确实有较高的几率反复出现示开启消息漫游验证的问题，补丁方面无法解决此问题，本身也是为了好看和 YY，没什么实际作用，不用也不会有广告，所以是否要用各位自己决定吧",
         "⑦ 聊天记录 --> 复制粘贴效果改为文本方式，以旧版纯本文的方式来复制粘贴聊天消息，此功能已知有个小小不完善，文本模式下如果不带上人名复制单人的多行消息时，那么只能粘贴到多行消息的第一行，带上人名一起复制则无此问题，气泡模式下也无此问题",
-        ""
+        "",
+        "使用 'scoop install vcredist-aio' 或 'scoop install vcredist-mix' 安装运行库",
+        "使用 'Start-Process \"$dir\\组件功能切换.bat\" -Verb RunAs' 切换组件功能"
     ],
     "url": [
         "https://pan.jiemi.workers.dev/?file=/Public/scoop/QQ/腾讯QQ_9.5.3_(28008)_绿色版_With_NtrQQ_7.1.2.7z",
@@ -39,8 +41,8 @@
     ],
     "hash": [
         "b1f72f6f3a7d4099d894383e49ef7f130896efca67d4e2b5bb115d4eb4b11441",
-        "2c12dbf9d427af3856434b5cc3fd8d6f22e89ba92f716565661d15554ba58986",
-        "c2ae197fc85ca7c41bd0aadc3cac6d6985b83b7152a55bac6758d62e8e8bec32"
+        "e038e36ccaec8ff3c9a01b0dfba3a1dae4b9f0886b6bb6a2e6bfda9b3bab1c6c",
+        "44378a92710ad9f581c637439cdf19ec0a541a48ee83b7085c0dd6536afbef8a"
     ],
     "extract_dir": "QQ",
     "installer": {
@@ -54,12 +56,13 @@
     },
     "bin": [
         [
-            "$dir\\bin\\QQScLauncher.exe"
+            "Bin\\QQScLauncher.exe",
+            "qq"
         ]
     ],
     "shortcuts": [
         [
-            "$dir\\bin\\QQScLauncher.exe",
+            "Bin\\QQScLauncher.exe",
             "腾讯 QQ"
         ]
     ],
