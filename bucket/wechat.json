@@ -1,5 +1,5 @@
 {
-    "version": "nightly",
+    "version": "3.4.0",
     "description": "Free messaging and calling app.",
     "homepage": "https://weixin.qq.com/",
     "license": {
@@ -8,10 +8,8 @@
     },
     "notes": "We don't persist your WeChat data, they are still storaged in '%APPDATA%\\Tencent\\WeChat'.",
     "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-    "hash": "7053e63c0b57760a3e559c3e65fb043fcc4f199611072b5dbcf0a01cf31c936c",
-    "bin": [
-        "wechat.exe"
-    ],
+    "hash": "852c5ebf11f3fd1e87ca3913773efcdd2ba0bf96dc188ae2a9d06cb37040a664",
+    "bin": "wechat.exe",
     "shortcuts": [
         [
             "wechat.exe",
