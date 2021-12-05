@@ -59,6 +59,12 @@
         "sha256hash": "51ddc37ddac94eeb0d92d0fef6fea02cf9339628472c9ddf7c3e13a7694be738",
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Typora/typora_0.11.18_x64_1117.exe"
     },
+    "vcredist-mix": {
+        "name": "微软常用运行库合集",
+        "version": "2021.11.09",
+        "sha256hash": "b7587a80f877f47b211b6e912fcf45cfbf676441a519162f577733536f856487",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/vcredist/微软常用运行库合集_2021.11.09.exe"
+    },
     "xftp": {
         "name": "Xftp",
         "version": "7.0.0088",
