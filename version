@@ -17,6 +17,12 @@
         "sha256hash": "c3b85074cea05975adc72c4608c7d0de38ff45d0b70f0da325d8ea7fc910bb6e",
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player64_v211118(1.7.21566)_Public_211125.7z"
     },
+    "potplayer-dev": {
+        "name": "PotPlayer Dev",
+        "version": "211202",
+        "sha256hash": "c6493c51a75ccb711eaa6be950266096a613b40418f7052b8bb5eca460ad6a4c",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player64_v211202(1.7.21567)_Dev_20211202.7z"
+    },
     "potplayer-skin-modernwin10": {
         "name": "Modern W10 Skin for PotPlayer ITA-ENG",
         "version": "211117",
