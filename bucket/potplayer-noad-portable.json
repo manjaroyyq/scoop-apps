@@ -53,6 +53,7 @@
     ],
     "checkver": {
         "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
+        "jsonpath": "$.potplayer.url",
         "regex": "(?s)(?<path>Public/scoop/PotPlayer/(?<filename>Pot_Player(?:64|32)_v(?<version>[\\d]{6})[(](?<build>[\\d.]+)[)]_(?:Public|Dev)_(?<date>[\\d]{6})\\.(?:zip|7z)))"
     },
     "autoupdate": {
