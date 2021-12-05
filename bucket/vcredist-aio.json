@@ -6,7 +6,7 @@
         "identifier": "Unlicense License",
         "url": "https://github.com/abbodi1406/vcredist/blob/master/LICENSE"
     },
-    "notes": "You can now remove vcredist-aio installers with 'scoop uninstall $app'",
+    "notes": "You can now remove vcredist-aio installers with 'scoop uninstall vcredist-aio'",
     "url": "https://github.com/abbodi1406/vcredist/releases/download/v0.55.0/VisualCppRedist_AIO_x86_x64_55.zip",
     "hash": "73a25cc0b5167f65534b864fa40d7efcec9d5d964594ccc0eee78ebc4bb38c50",
     "post_install": [
