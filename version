@@ -1,4 +1,16 @@
 {
+    "bandicam-32bit": {
+        "name": "Bandicam 32Bit",
+        "version": "5.1.1.1837",
+        "sha256hash": "72e3f909b911b1d923dfd5195add1033e2d6da8ac54a2d4ffce77f8a5de50bc8",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandicam/Bandicam_v5.1.1.1837_x32.7z"
+    },
+    "bandicam-64bit": {
+        "name": "Bandicam 64Bit",
+        "version": "5.3.4.1894",
+        "sha256hash": "551e127713f955250bff247e0c907fd2b7f150bd12a8799ad5c0ef8fe8c92916",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandicam/Bandicam_v5.3.4.1894_x64.7z"
+    },
     "potplayer": {
         "name": "PotPlayer",
         "version": "211118",
@@ -22,6 +34,18 @@
         "version": "210813",
         "sha256hash": "d6cc220ac1993ba357a3dfd27039fc48b759329c86d722db79bddabe9a157c93",
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player_skin_XMP5_WithoutFrame_Fix.zip"
+    },
+    "qq-np": {
+        "name": "腾讯 QQ 绿色版",
+        "version": "9.5.3_(28008)",
+        "sha256hash": "9e10d6a3c5ce329165a9e3adc6ea95a5a7fea6f563b6f98790e8474f6030a610",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/QQ/腾讯QQ_9.5.3_(28008)_绿色版.7z"
+    },
+    "qq-with-ntr-np": {
+        "name": "腾讯 QQ 绿色版 With NtrQQ",
+        "version": "9.5.3_(28008)",
+        "sha256hash": "b1f72f6f3a7d4099d894383e49ef7f130896efca67d4e2b5bb115d4eb4b11441",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/QQ/腾讯QQ_9.5.3_(28008)_绿色版_With_NtrQQ_7.1.2.7z"
     },
     "typora-beta-32bit": {
         "name": "A decent markdown editor finally available on Windows(Beta, 32-bit versions)",
