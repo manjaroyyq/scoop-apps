@@ -1,0 +1,56 @@
+{
+    "version": "4.1",
+    "description": "XnShell is a powerful Shell extension for Windows ™ Explorer, allowing you to preview and perform various operations within Windows Explorer context menu.",
+    "homepage": "https://www.xnview.com/en/xnshell",
+    "license": "Freeware",
+    "notes": [
+        "XnShell is provided as FREEWARE (NO Adware, NO Spyware).",
+        "If you enjoy using XnShell, Feel free to help the developer with a small donation.",
+        "License： Name(XnSoft), Key(1865469205)"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://download.xnview.com/XnShellEx64.zip",
+            "hash": "3ff07d08833be4587778d29891486966121fa95a8c44dc8fd1c1ba4cf33cc970",
+            "installer": {
+                "script": [
+                    "sudo regsvr32 \"$dir\\XnViewShellExt64.dll\""
+                ]
+            },
+            "uninstaller": {
+                "script": [
+                    "sudo regsvr32 /u \"$dir\\XnViewShellExt64.dll\""
+                ]
+            }
+        },
+        "32bit": {
+            "url": "https://download.xnview.com/XnShellEx.zip",
+            "hash": "d71b149caca67ddf7f43e160c062931ff3cfee086c244d2a431a0ef96cb6b900",
+            "installer": {
+                "script": [
+                    "sudo regsvr32 \"$dir\\XnViewShellExt.dll\""
+                ]
+            },
+            "uninstaller": {
+                "script": [
+                    "sudo regsvr32 /u \"$dir\\XnViewShellExt.dll\""
+                ]
+            }
+        }
+    },
+    "extract_dir": "XnShellEx",
+    "checkver": {
+        "url": "https://www.xnview.com/en/xnshell/",
+        "regex": "Download <b>XnShell ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.xnview.com/XnShellEx64.zip"
+            },
+            "32bit": {
+                "url": "https://download.xnview.com/XnShellEx.zip"
+            }
+        }
+    }
+}
