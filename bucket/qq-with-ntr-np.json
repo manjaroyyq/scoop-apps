@@ -1,5 +1,5 @@
 {
-    "version": "9.5.3",
+    "version": "9.5.3-28008",
     "description": "腾讯 QQ PC 版去广告特别版，由 @Dreamcast 组装打包而成",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -32,7 +32,7 @@
         "⑦ 聊天记录 --> 复制粘贴效果改为文本方式，以旧版纯本文的方式来复制粘贴聊天消息，此功能已知有个小小不完善，文本模式下如果不带上人名复制单人的多行消息时，那么只能粘贴到多行消息的第一行，带上人名一起复制则无此问题，气泡模式下也无此问题",
         "",
         "使用 'scoop install vcredist-aio' 或 'scoop install vcredist-mix' 安装运行库",
-        "使用 'Start-Process \"$dir\\组件功能切换.bat\" -Verb RunAs' 切换组件功能"
+        "使用 'sudo cmd /c \"$dir\\组件功能切换.bat\"' 切换组件功能"
     ],
     "url": [
         "https://pan.jiemi.workers.dev/?file=/Public/scoop/QQ/腾讯QQ_9.5.3_(28008)_绿色版_With_NtrQQ_7.1.2.7z",
@@ -46,11 +46,11 @@
     ],
     "extract_dir": "QQ",
     "installer": {
-        "script": "Start-Process \"$dir\\install.bat\" -Verb RunAs"
+        "script": "sudo cmd /c \"$dir\\install.bat\""
     },
     "uninstaller": {
         "script": [
-            "Start-Process \"$dir\\uninstall.bat\" -Verb RunAs",
+            "sudo cmd /c \"$dir\\uninstall.bat\"",
             "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
         ]
     },
@@ -67,16 +67,16 @@
         ]
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-        "jsonpath": "$.qq-with-ntr-np.url",
-        "regex": "(?s)(?<path>Public/scoop/QQ/(?<filename>腾讯QQ_(?<version>[\\d.]+)_[(](?<build>[\\d]+)[)].+\\.(?:zip|7z)))"
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/QQ",
+        "regex": "(?s)(?<filename>腾讯QQ_(?<ver>([\\d.]+))_[(](?<build>([\\d]+))[)]_绿色版_With_NtrQQ_.*?\\.(?:7z|zip|rar))",
+        "replace": "${ver}-${build}"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/$matchPath",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/QQ/$matchFilename",
         "hash": {
-            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-            "mode": "json",
-            "jsonpath": "$.qq-with-ntr-np.sha256hash"
+            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/QQ",
+            "mode": "extract",
+            "regex": "^$sha256([\\s]+)$basename"
         }
     }
 }
