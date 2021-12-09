@@ -1,4 +1,4 @@
-@ECHO OFF&PUSHD %~DP0 &TITLE ÂÌ»¯
+@ECHO OFF&PUSHD %~DP0 &TITLE ç»¿åŒ–
 @ echo.
 ver|findstr "5\.[0-9]\.[0-9][0-9]*">nul && goto skip
 >NUL 2>&1 REG.exe query "HKU\S-1-5-19" || (
@@ -10,23 +10,23 @@ ver|findstr "5\.[0-9]\.[0-9][0-9]*">nul && goto skip
 )
 :skip
 @ echo.
-@ echo. ÂÌ»¯Ç°ÇëÏÈÈ·±£ Visual C++ ºÍ Universal C ÔËÐÐ¿âÒÑ°²×°ÆëÈ«£¬
+@ echo. ç»¿åŒ–å‰è¯·å…ˆç¡®ä¿ Visual C++ å’Œ Universal C è¿è¡Œåº“å·²å®‰è£…é½å…¨ï¼Œ
 @ echo.
-@ echo. Ê¹ÓÃ 'scoop install vcredist-aio' »ò 'scoop install vcredist-mix' °²×°ÔËÐÐ¿â£¬
+@ echo. ä½¿ç”¨ 'scoop install vcredist-aio' æˆ– 'scoop install vcredist-mix' å®‰è£…è¿è¡Œåº“ï¼Œ
 @ echo.
-@ echo. ·ñÔòÂÌ»¯¹ý³ÌÖÐ»á±¨´í£¬QQ Ò²¿ÉÄÜ»á²»ÄÜÕý³£ÔËÐÐ¡£
+@ echo. å¦åˆ™ç»¿åŒ–è¿‡ç¨‹ä¸­ä¼šæŠ¥é”™ï¼ŒQQ ä¹Ÿå¯èƒ½ä¼šä¸èƒ½æ­£å¸¸è¿è¡Œã€‚
 @ echo.
 @ echo.
  pause
 
-:: °²×°Ç°½áÊøÏà¹Ø½ø³Ì
+:: å®‰è£…å‰ç»“æŸç›¸å…³è¿›ç¨‹
 taskkill /f /im TXP* >NUL 2>NUL
 taskkill /f /im tad* >NUL 2>NUL
 taskkill /f /im QQP* >NUL 2>NUL
 taskkill /f /im QQC* >NUL 2>NUL
 taskkill /f /im QQ.exe >NUL 2>NUL
 
-:: ÇåÀíºóÌ¨Ïà¹ØÎÄ¼þ¼°×¢²á²ÐÁô
+:: æ¸…ç†åŽå°ç›¸å…³æ–‡ä»¶åŠæ³¨å†Œæ®‹ç•™
 del /f /q "%TMP%\*.tvl" >NUL 2>NUL
 del /f /q "%TMP%\*.tsd" >NUL 2>NUL
 del /f /q "%TMP%\ts*.dat" >NUL 2>NUL
@@ -64,7 +64,7 @@ rd /s /q "%CommonProgramFiles%\Tencent\QQProtect"2>NUL
 rd /s /q "%CommonProgramFiles(x86)%\Tencent\QQProtect"2>NUL
 reg delete HKLM\SYSTEM\CurrentControlSet\services\QQProtect /F>NUL 2>NUL
 
-:: ×¢²áÐ­Òé£º¹ØÁªÍøÒ³»á»°¡¢±íÇé°ü¹ØÁª¡¢ÒôÀÖÊÕÌýµÈ
+:: æ³¨å†Œåè®®ï¼šå…³è”ç½‘é¡µä¼šè¯ã€è¡¨æƒ…åŒ…å…³è”ã€éŸ³ä¹æ”¶å¬ç­‰
 if exist Bin\Timwp.dll regsvr32 /s Bin\Timwp.dll
 if exist Bin\AppCom.dll regsvr32 /s Bin\AppCom.dll
 if exist Bin\Common.dll regsvr32 /s Bin\Common.dll
@@ -74,40 +74,40 @@ if exist Bin\KernelUtil.dll regsvr32 /s Bin\KernelUtil.dll
 if exist Bin\TXPlatform.exe Bin\TXPlatform.exe /RegServer
 if exist Bin\QQExternal.exe Bin\QQExternal.exe /SetupRegister
 
-:: ×¢²á¹È¸è¡¢»ðºü¡¢Opera ¿ìËÙµÇÂ½¿Ø¼þ
+:: æ³¨å†Œè°·æ­Œã€ç«ç‹ã€Opera å¿«é€Ÿç™»é™†æŽ§ä»¶
 regsvr32 /s Bin\TXSSO\Npchrome\npactivex.dll
 
-:: ×¢²áSSOºËÐÄ¿â¡¢IE¼°½Ó¿Ú¿ìËÙµÇÂ½¿Ø¼þ
+:: æ³¨å†ŒSSOæ ¸å¿ƒåº“ã€IEåŠæŽ¥å£å¿«é€Ÿç™»é™†æŽ§ä»¶
 regsvr32 /s Bin\TXSSO\Bin\SSOCommon.dll
 regsvr32 /s Bin\TXSSO\Bin\npSSOAxCtrlForPTLogin.dll
 
-:: ×¢²áÖÐ×ªÕ¾ÉÏ´«£¬Èº¹²Ïí¡¢Î¢ÔÆÉÏ´«¿Ø¼þ
+:: æ³¨å†Œä¸­è½¬ç«™ä¸Šä¼ ï¼Œç¾¤å…±äº«ã€å¾®äº‘ä¸Šä¼ æŽ§ä»¶
 regsvr32 /s Plugin\Com.Tencent.NetDisk\Bin\QQDisk\Bin\TXFTNActiveX.dll
 
-:: ×¢²áµã²¥¿Ø¼þ£¬¾«¼ò¼¯³É£¬ÃâÈ¥ºóÐø°²×°
+:: æ³¨å†Œç‚¹æ’­æŽ§ä»¶ï¼Œç²¾ç®€é›†æˆï¼Œå…åŽ»åŽç»­å®‰è£…
 regsvr32 /s Bin\TXSSO\QzoneMusic\QzoneMusic.dll
 if exist Bin\TXSSO\QzoneMusic\QzoneMusic.exe Bin\TXSSO\QzoneMusic\QzoneMusic.exe /RegServer
 
-:: ´«ËÍQQ±ãÇ©Òýµ¼£¬²»´«ËÍµ½ºóÌ¨Î»ÖÃÔòÃæ°åÍ¼±êÎÞ·¨Æô¶¯
+:: ä¼ é€QQä¾¿ç­¾å¼•å¯¼ï¼Œä¸ä¼ é€åˆ°åŽå°ä½ç½®åˆ™é¢æ¿å›¾æ ‡æ— æ³•å¯åŠ¨
 xcopy /s/i/y Bin\TXSSO\QQApp "%AppData%\Tencent\QQ\QQApp" >NUL 2>NUL
 
-:: Éú³É¸öÈËÎÄ¼þ¼Ð±£´æÎ»ÖÃÅäÖÃÎÄ¼þ£¬ÈÃ Win7¡¢Win8 »ò¸ü¸ß°æµÄÏµÍ³ÄÜÕý³£±£´æ×Ô¶¨ÒåÂ·¾¶
+:: ç”Ÿæˆä¸ªäººæ–‡ä»¶å¤¹ä¿å­˜ä½ç½®é…ç½®æ–‡ä»¶ï¼Œè®© Win7ã€Win8 æˆ–æ›´é«˜ç‰ˆçš„ç³»ç»Ÿèƒ½æ­£å¸¸ä¿å­˜è‡ªå®šä¹‰è·¯å¾„
 if not exist "%Public%\Documents\Tencent\QQ" md "%Public%\Documents\Tencent\QQ"2>NUL
 if not exist "%Public%\Documents\Tencent\QQ\UserDataInfo.ini" echo.>"%Public%\Documents\Tencent\QQ\UserDataInfo.ini"2>NUL
 
-:: ÉèÖÃ°²×°Â·¾¶£¬°²×°ÊÓÆµÁôÑÔºÍÓ°Òô²¥·ÅµÈ×é¼þÏÂÔØÐèÒª
+:: è®¾ç½®å®‰è£…è·¯å¾„ï¼Œå®‰è£…è§†é¢‘ç•™è¨€å’Œå½±éŸ³æ’­æ”¾ç­‰ç»„ä»¶ä¸‹è½½éœ€è¦
 if not exist "%WinDir%\SysWOW64" reg add HKLM\Software\Tencent\QQ2009 /v Install /d "%~dp0\" /f >NUL
 if exist "%WinDir%\SysWOW64" reg add HKLM\Software\Wow6432Node\Tencent\QQ2009 /v Install /d "%~dp0\" /f >NUL
 
-:: ÉèÖÃ°²×°°æ±¾ºÅ£¬ÆóÒµÀàÐÍÍøÒ³»á»°ÐèÒª£¬CRM×é¼þÐè±£Áô
+:: è®¾ç½®å®‰è£…ç‰ˆæœ¬å·ï¼Œä¼ä¸šç±»åž‹ç½‘é¡µä¼šè¯éœ€è¦ï¼ŒCRMç»„ä»¶éœ€ä¿ç•™
 if not exist "%WinDir%\SysWOW64" reg add HKLM\Software\Tencent\QQ2009 /v version /d "58.51.0.28008.0" /f >NUL
 if exist "%WinDir%\SysWOW64" reg add HKLM\Software\Wow6432Node\Tencent\QQ2009 /v version /d "58.51.0.28008.0" /f >NUL
 
 @REM :DesktopLnk
-@REM ::ÌáÊ¾°²×°Íê³ÉÁË£¬¿ÉÑ¡´´½¨×ÀÃæ¿ì½Ý·½Ê½¡£
-@REM ECHO.&ECHO.ÂÌ»¯°²×°Íê³É! ÊÇ·ñ´´½¨×ÀÃæ¿ì½Ý·½Ê½£¿
-@REM ECHO.&ECHO.[ÊÇ] Çë°´ÈÎÒâ¼ü£¬[·ñ] Ö±½Ó¹Øµô±¾´°¿Ú£¡&PAUSE >NUL 2>NUL
-@REM mshta VBScript:Execute("Set a=CreateObject(""WScript.Shell""):Set b=a.CreateShortcut(a.SpecialFolders(""Desktop"") & ""\ÌÚÑ¶QQ.lnk""):b.TargetPath=""%~dp0Bin\QQScLauncher.exe"":b.WorkingDirectory=""%~dp0Bin"":b.Save:close")
-@REM ECHO.&ECHO.Íê³É! &PAUSE >NUL 2>NUL
+@REM ::æç¤ºå®‰è£…å®Œæˆäº†ï¼Œå¯é€‰åˆ›å»ºæ¡Œé¢å¿«æ·æ–¹å¼ã€‚
+@REM ECHO.&ECHO.ç»¿åŒ–å®‰è£…å®Œæˆ! æ˜¯å¦åˆ›å»ºæ¡Œé¢å¿«æ·æ–¹å¼ï¼Ÿ
+@REM ECHO.&ECHO.[æ˜¯] è¯·æŒ‰ä»»æ„é”®ï¼Œ[å¦] ç›´æŽ¥å…³æŽ‰æœ¬çª—å£ï¼&PAUSE >NUL 2>NUL
+@REM mshta VBScript:Execute("Set a=CreateObject(""WScript.Shell""):Set b=a.CreateShortcut(a.SpecialFolders(""Desktop"") & ""\è…¾è®¯QQ.lnk""):b.TargetPath=""%~dp0Bin\QQScLauncher.exe"":b.WorkingDirectory=""%~dp0Bin"":b.Save:close")
+@REM ECHO.&ECHO.å®Œæˆ! &PAUSE >NUL 2>NUL
 
 ECHO. >NUL&EXIT

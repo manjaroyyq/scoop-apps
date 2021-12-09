@@ -1,4 +1,4 @@
-@ECHO OFF&PUSHD %~DP0 &TITLE Ð¶ÔØ
+@ECHO OFF&PUSHD %~DP0 &TITLE å¸è½½
 @ echo.
 ver|findstr "5\.[0-9]\.[0-9][0-9]*">nul && goto skip
 >NUL 2>&1 REG.exe query "HKU\S-1-5-19" || (
@@ -10,14 +10,14 @@ ver|findstr "5\.[0-9]\.[0-9][0-9]*">nul && goto skip
 )
 :skip
 
-:: Ð¶ÔØÇ°½áÊøÏà¹Ø½ø³Ì
+:: å¸è½½å‰ç»“æŸç›¸å…³è¿›ç¨‹
 taskkill /f /im TXP* >NUL 2>NUL
 taskkill /f /im tad* >NUL 2>NUL
 taskkill /f /im QQP* >NUL 2>NUL
 taskkill /f /im QQC* >NUL 2>NUL
 taskkill /f /im QQ.exe >NUL 2>NUL
 
-::ÇåÀíÏà¹ØÊý¾Ý
+::æ¸…ç†ç›¸å…³æ•°æ®
 rd /s /q "%ProgramData%\QQPet"2>NUL
 rd /s /q "%AppData%\Tencent\QQ"2>NUL
 rd /s /q "%AppData%\QXiu Files"2>NUL
@@ -49,7 +49,7 @@ rd /s /q "%AllUsersProfile%\Application Data\Tencent\QQProtect"2>NUL
 rd /s /q "%CommonProgramFiles%\Tencent\QQProtect"2>NUL
 rd /s /q "%CommonProgramFiles(x86)%\Tencent\QQProtect"2>NUL
 
-::Ð¶ÔØËùÓÐ¿Ø¼þ
+::å¸è½½æ‰€æœ‰æŽ§ä»¶
 regsvr32 /s /u Bin\TXSSO\Npchrome\npactivex.dll
 regsvr32 /s /u Bin\TXSSO\Bin\SSOCommon.dll
 regsvr32 /s /u Bin\TXSSO\Bin\npSSOAxCtrlForPTLogin.dll
@@ -64,7 +64,7 @@ if exist Bin\TXPlatform.exe Bin\TXPlatform.exe /UnregServer
 if exist Bin\TXSSO\QzoneMusic\QzoneMusic.exe Bin\TXSSO\QzoneMusic\QzoneMusic.exe /UnRegServer
 regsvr32 /s /u Plugin\Com.Tencent.NetDisk\Bin\QQDisk\Bin\TXFTNActiveX.dll
 
-::É¾³ý×¢²á±í¼üÖµ
+::åˆ é™¤æ³¨å†Œè¡¨é”®å€¼
 reg delete HKCU\Tencent /F  >NUL 2>NUL
 reg delete HKLM\Software\Classes\QQPet /F>NUL 2>NUL
 reg delete HKCU\Software\Tencent\Plugin /F  >NUL 2>NUL
@@ -107,9 +107,9 @@ reg delete HKLM\Software\Wow6432Node\Tencent\Report /F>NUL 2>NUL
 reg delete HKLM\Software\Wow6432Node\Classes\Tencent /F>NUL 2>NUL
 reg delete HKLM\SYSTEM\CurrentControlSet\services\QQProtect /F>NUL 2>NUL
 
-@REM ::É¾³ý×ÀÃæÍ¼±ê(Ö»Ö§³ÖÏµÍ³Ä¬ÈÏ×ÀÃæÎ»ÖÃ)
-@REM del /q "%userprofile%\×ÀÃæ\ÌÚÑ¶QQ.lnk" >NUL 2>NUL
-@REM del /q "%userprofile%\Desktop\ÌÚÑ¶QQ.lnk" >NUL 2>NUL
-@REM ECHO.&ECHO.Ð¶ÔØÍê³É! &PAUSE >NUL 2>NUL
+@REM ::åˆ é™¤æ¡Œé¢å›¾æ ‡(åªæ”¯æŒç³»ç»Ÿé»˜è®¤æ¡Œé¢ä½ç½®)
+@REM del /q "%userprofile%\æ¡Œé¢\è…¾è®¯QQ.lnk" >NUL 2>NUL
+@REM del /q "%userprofile%\Desktop\è…¾è®¯QQ.lnk" >NUL 2>NUL
+@REM ECHO.&ECHO.å¸è½½å®Œæˆ! &PAUSE >NUL 2>NUL
 
 ECHO. >NUL&EXIT
