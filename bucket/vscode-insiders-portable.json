@@ -1,5 +1,5 @@
 {
-    "version": "1.63.0-insider",
+    "version": "1.64.0-insider",
     "description": "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications(Insiders, Portable Edition).",
     "homepage": "https://code.visualstudio.com/insiders/",
     "license": {
@@ -20,7 +20,7 @@
                 "https://raw.githubusercontent.com/ScoopInstaller/Extras/master/scripts/vscode/uninstall-context.reg"
             ],
             "hash": [
-                "fe2aecbfcffed71e27e490576be9ef8334d535b519b52fd73a88651c5f980b09",
+                "a2f6c6760dc74ca868a63a21bc48f599f844bbaeb2d4a2cff3f5a411db83e1bf",
                 "8ef94c82319b69754bdae0099af266d184d179a37af8b8beb11334c6ab639752",
                 "df2a5162e72e2518e2b75b4337c8e7b46c136554872af90fa0de1cf6ebef376f"
             ]
@@ -32,7 +32,7 @@
                 "https://raw.githubusercontent.com/ScoopInstaller/Extras/master/scripts/vscode-uninstall-context.reg"
             ],
             "hash": [
-                "87569d1508a10aebfa95be526d23b8b90a419ce8f1ba19b9c9ea1cb86ff8db36",
+                "ed33cf8ae3d2c5e617d8761f08e9b085891adf16b8b1fbb6487dd8c1e901e713",
                 "8ef94c82319b69754bdae0099af266d184d179a37af8b8beb11334c6ab639752",
                 "df2a5162e72e2518e2b75b4337c8e7b46c136554872af90fa0de1cf6ebef376f"
             ]
