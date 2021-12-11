@@ -1,5 +1,5 @@
 {
-    "version": "2.50.2",
+    "version": "2.50.4",
     "description": "XnView is an efficient image viewer, browser and converter for Windows.",
     "homepage": "https://www.xnview.com/en/xnview",
     "license": "Freeware",
@@ -10,7 +10,7 @@
         "Remove User Data：'Remove-Item -Path \"$env:APPDATA\\XnView\" -Recurse -Force'"
     ],
     "url": "https://download.xnview.com/XnView-win-small.zip",
-    "hash": "d094c5864fedd642c108ecf3a4a6599e242d83ed888c5249e2adb67da0e8ed4d",
+    "hash": "958b45c80607edd95d049a0dc8a36e474b844a3a9800b84c55fde09c79ec38e8",
     "extract_dir": "XnView",
     "bin": [
         [

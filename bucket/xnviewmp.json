@@ -1,5 +1,5 @@
 {
-    "version": "0.99.1",
+    "version": "0.99.6",
     "description": "XnView MP(Multi-Platform) is a versatile and powerful photo viewer, image management, image resizer. XnView is one of the most stable, easy-to-use, and comprehensive photo editors.",
     "homepage": "https://www.xnview.com/en/xnviewmp",
     "license": "Freeware",
@@ -12,11 +12,11 @@
     "architecture": {
         "64bit": {
             "url": "https://download.xnview.com/XnViewMP-win-x64.zip",
-            "hash": "3ff07d08833be4587778d29891486966121fa95a8c44dc8fd1c1ba4cf33cc970"
+            "hash": "7491ad0664f6e24d75e44c56e4b4e0d12fb4e2f951e2e4ae252a8366651cdacb"
         },
         "32bit": {
             "url": "https://download.xnview.com/XnViewMP-win.zip",
-            "hash": "d71b149caca67ddf7f43e160c062931ff3cfee086c244d2a431a0ef96cb6b900"
+            "hash": "2271a9727fedeb2506f9430ea5e40152d6e4dd6ac6d2801d1705aaa315cb9596"
         }
     },
     "extract_dir": "XnViewMP",
