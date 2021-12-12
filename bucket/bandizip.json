@@ -1,60 +1,119 @@
 {
-    "homepage": "http://www.bandisoft.com/bandizip",
-    "description": "Bandizip 是一个强大的多功能压缩文件管理工具，可提供很快的解压缩速度和其他各种实用功能",
-    "version": "7.21",
+    "version": "7.22",
+    "description": "Yet another typical ZIP archiver",
+    "homepage": "http://www.bandisoft.com/bandizip/",
     "license": {
-        "identifier": "Freeware",
+        "identifier": "EULA",
         "url": "https://en.bandisoft.com/bandizip/eula/"
     },
+    "notes": [
+        "If you encounter \"file in use\" error during uninstallation, try the following steps:",
+        "   1. Run `sudo regsvr32 /u \"$dir\\bdzshl.x64.dll\"` or `sudo regsvr32 /u \"$dir\\bdzshl.x86.dll\"`.",
+        "   2. Reboot.",
+        "   3. Run `scoop uninstall bandizip`."
+    ],
+    "depends": "sudo",
     "architecture": {
         "64bit": {
             "url": [
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip_Professional_v7.21_All_Portable.zip",
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip/bdzshl.x64.dll"
+                "http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE",
+                "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/bandizip/Bandizip.v7.xx.x64.Patch.20201104.exe#/patch_86.exe"
             ],
             "hash": [
-                "cda8edc92f4689650906abcccb5fc5645fc9fec3fd79252d5e663a6a5317dd65",
-                "6CBEECC2600E3C964B00164880E577AFD55F7BCB3A1B96099C7B1829840A239F"
+                "6e25c6442bd996bafc26a6c034621c01a8a4740a8fbe28c1d3d98e53ba8f40f8",
+                "a4ee6db8b2dbca768ed566336810c789362b9b53a6f0ed1942412886f997dc81"
             ],
-            "pre_install": "Rename-Item \"$dir\\Bandizip.x64.exe\" 'Bandizip.exe'",
-            "installer": {
-                "script": [
-                    "Get-ChildItem \"$dir\\Bandizip.x*.exe\" | Remove-Item",
-                    "if (!(Test-Path \"$persist_dir\\Bandizip.ini\")) { New-Item \"$dir\\Bandizip.ini\" | Out-Null }",
-                    "regsvr32 /s \"$dir\\bdzshl.x64.dll\""
-                ]
-            },
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\$fname\" -Overwrite Rename -Removal",
+                "Remove-Item \"$dir\\$*\" -Recurse",
+                "if (-not (Test-Path \"$persist_dir\\setting.ini\")) { New-Item \"$dir\\setting.ini\" -ItemType File | Out-Null }",
+                "# Enable portable mode",
+                "$cont = (Get-Content \"$dir\\config.ini\") -replace '^(is_portable\\s+=\\s+)0', '${1}1'",
+                "Set-Content \"$dir\\config.ini\" $cont -Encoding ASCII -Force",
+                "Rename-Item \"$dir\\Bandizip.x64.exe\" 'Bandizip.exe'",
+                "Rename-Item \"$dir\\bz.x64.exe\" 'bz.exe'",
+                "sudo regsvr32 \"$dir\\bdzshl.x64.dll\"",
+                "sudo Start-Process -filepath \"$dir\\patch_64.exe\" -ArgumentList \"/silent\" -Wait",
+                "Start-Process -filepath \"$dir\\Bandizip.exe\" -ArgumentList \"/setup\""
+            ],
             "uninstaller": {
-                "script": "regsvr32 /s /u \"$dir\\bdzshl.x64.dll\""
+                "script": [
+                    "$text = @(",
+                    "    'If you encounter \"file in use\" error during uninstallation, try the following steps:'",
+                    "    '    1. Run `sudo regsvr32 /u \"$dir\\bdzshl.x64.dll\"`.'",
+                    "    '    2. Reboot.'",
+                    "    '    3. Run `scoop uninstall bandizip`.'",
+                    ")",
+                    "sudo regsvr32 /u \"$dir\\bdzshl.x64.dll\"",
+                    "warn $($text -join \"`r`n\")"
+                ]
             }
         },
         "32bit": {
             "url": [
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip_Professional_v7.21_All_Portable.zip",
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandizip/bdzshl.x86.dll"
+                "http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE",
+                "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/bandizip/Bandizip.v7.xx.x32.Patch.20201104.exe#/patch_64.exe"
             ],
             "hash": [
-                "cda8edc92f4689650906abcccb5fc5645fc9fec3fd79252d5e663a6a5317dd65",
-                "148AE610B55AA53C2BCC37FC71AC5FF670A25C9F50D869A6FC54F4B36E591425"
+                "6e25c6442bd996bafc26a6c034621c01a8a4740a8fbe28c1d3d98e53ba8f40f8",
+                "e407833cee189f2a242d5a225e308c52a5e46b601e04e6a231a7203bb5bb5809"
             ],
-            "pre_install": "Rename-Item \"$dir\\Bandizip.x86.exe\" 'Bandizip.exe'",
-            "installer": {
-                "script": [
-                    "Get-ChildItem \"$dir\\Bandizip.x*.exe\" | Remove-Item",
-                    "if (!(Test-Path \"$persist_dir\\Bandizip.ini\")) { New-Item \"$dir\\Bandizip.ini\" | Out-Null }",
-                    "regsvr32 /s \"$dir\\bdzshl.x86.dll\""
-                ]
-            },
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\$fname\" -Overwrite Rename -Removal",
+                "Remove-Item \"$dir\\$*\" -Recurse",
+                "if (-not (Test-Path \"$persist_dir\\setting.ini\")) { New-Item \"$dir\\setting.ini\" -ItemType File | Out-Null }",
+                "# Enable portable mode",
+                "$cont = (Get-Content \"$dir\\config.ini\") -replace '^(is_portable\\s+=\\s+)0', '${1}1'",
+                "Set-Content \"$dir\\config.ini\" $cont -Encoding ASCII -Force",
+                "Rename-Item \"$dir\\Bandizip.x86.exe\" 'Bandizip.exe'",
+                "Rename-Item \"$dir\\bz.x86.exe\" 'bz.exe'",
+                "sudo regsvr32 \"$dir\\bdzshl.x86.dll\"",
+                "sudo Start-Process -filepath \"$dir\\patch_86.exe\" -ArgumentList \"/silent\" -Wait",
+                "Start-Process -filepath \"$dir\\Bandizip.exe\" -ArgumentList \"/setup\""
+            ],
             "uninstaller": {
-                "script": "regsvr32 /s /u \"$dir\\bdzshl.x86.dll\""
+                "script": [
+                    "$text = @(",
+                    "    'If you encounter \"file in use\" error during uninstallation, try the following steps:'",
+                    "    '    1. Run `sudo regsvr32 /u \"$dir\\bdzshl.x86.dll\"`.'",
+                    "    '    2. Reboot.'",
+                    "    '    3. Run `scoop uninstall bandizip`.'",
+                    ")",
+                    "sudo regsvr32 /u \"$dir\\bdzshl.x86.dll\"",
+                    "warn $($text -join \"`r`n\")"
+                ]
             }
         }
     },
-    "bin": "Bandizip.exe",
-    "shortcuts": [["Bandizip.exe", "Bandizip"]],
+    "installer": {
+        "script": [
+            "Get-ChildItem \"$dir\\Bandizip.x*.exe\" | Remove-Item",
+            "Get-ChildItem \"$dir\\bz.x*.exe\" | Remove-Item",
+            "if (!(Test-Path \"$persist_dir\\Bandizip.ini\")) { New-Item \"$dir\\Bandizip.ini\" | Out-Null }"
+        ]
+    },
+    "bin": [
+        [
+            "Bandizip.exe",
+            "Bandizip"
+        ],
+        [
+            "bz.exe",
+            "bz"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Bandizip.exe",
+            "Bandizip"
+        ]
+    ],
     "persist": "Bandizip.ini",
-    "notes": [
-        "更新地址: https://www.423down.com/9735.html",
-        "使用 scoop uninstall bandizip 卸载会提示文件正在使用，需要重启系统后再次执行才能完全卸载"
-    ]
+    "checkver": {
+        "url": "https://en.bandisoft.com/bandizip/history/",
+        "regex": "v([\\d.]+)</font"
+    },
+    "autoupdate": {
+        "url": "http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE"
+    }
 }
