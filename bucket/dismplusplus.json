@@ -13,18 +13,39 @@
     ],
     "architecture": {
         "64bit": {
-            "bin": ["DISM++x64.exe", ["DISM++x64.exe", "DISM++"]],
-            "shortcuts": [["DISM++x64.exe", "DISM++"]]
+            "bin": [
+                "DISM++x64.exe",
+                [
+                    "DISM++x64.exe",
+                    "DISM++"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "DISM++x64.exe",
+                    "DISM++"
+                ]
+            ]
         },
         "32bit": {
-            "bin": ["DISM++x86.exe", ["DISM++x86.exe", "DISM++"]],
-            "shortcuts": [["DISM++x86.exe", "DISM++"]]
+            "bin": [
+                "DISM++x86.exe",
+                [
+                    "DISM++x86.exe",
+                    "DISM++"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "DISM++x86.exe",
+                    "DISM++"
+                ]
+            ]
         }
     },
     "persist": "Config\\Config.ini",
     "checkver": {
-        "url": "http://www.chuyu.me/en/",
-        "regex": "version\\s+([\\w.]+)\\s+\\(\\d+"
+        "github": "https://github.com/Chuyu-Team/Dism-Multi-language/"
     },
     "autoupdate": {
         "url": "https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v$version/Dism++$version.zip"

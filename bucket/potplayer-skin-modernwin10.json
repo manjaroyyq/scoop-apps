@@ -4,7 +4,7 @@
     "homepage": "https://www.deviantart.com/art/Modern-W10-Skin-for-PotPlayer-678381013",
     "license": "Unknown",
     "depends": "sapps/potplayer-noad-portable",
-    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player_skin_ModernW10_211117_ita_eng.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/PotPlayer_skin_ModernW10_ita_eng_211117.zip",
     "hash": "08f9de75122c7152ecb65b15936208230d93e815502d1c350afe67c2a308be83",
     "installer": {
         "script": [
@@ -24,16 +24,15 @@
         ]
     },
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-        "jsonpath": "$.potplayer-skin-modernwin10.url",
-        "regex": "(?s)(?<path>Public/scoop/PotPlayer/(?<filename>Pot_Player_skin_ModernW10_(?<version>[\\d]{6})_(?:chs|ita_eng)\\.(?:zip|7z)))"
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/PotPlayer",
+        "regex": "(?s)(?<filename>PotPlayer_skin_ModernW10_ita_eng_(?<version>[\\d]{6})\\.(?:zip|7z))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/$matchPath",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/$matchFilename",
         "hash": {
-            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-            "mode": "json",
-            "jsonpath": "$.potplayer-skin-modernwin10.sha256hash"
+            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/PotPlayer",
+            "mode": "extract",
+            "regex": "^$sha256([\\s]+)$basename"
         }
     }
 }

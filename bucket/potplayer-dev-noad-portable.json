@@ -1,5 +1,5 @@
 {
-    "version": "211202",
+    "version": "211207",
     "description": "Highly customizable media player(Dev, NoAD, Portable Edition).",
     "homepage": "https://potplayer.daum.net",
     "license": {
@@ -24,11 +24,11 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player64_v211202(1.7.21567)_Dev_20211202.7z",
+                "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/PotPlayer64_v211207(1.7.21568)_Dev.7z",
                 "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/potplayer/potplayer64-settings.reg"
             ],
             "hash": [
-                "c6493c51a75ccb711eaa6be950266096a613b40418f7052b8bb5eca460ad6a4c",
+                "9d776ebb34c2d69b0b60157f78a0ed43d98a2d6aa3ea40017de9fde9e40ce3f0",
                 "4EE44FDFE80D44E7F4404D682A9AE9F32F466C5D6F6B16AFEAD9710E654ACB97"
             ],
             "extract_dir": "PotPlayer64",
@@ -52,18 +52,17 @@
         "UrlList"
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-        "jsonpath": "$.potplayer-dev.url",
-        "regex": "(?s)(?<path>Public/scoop/PotPlayer/(?<filename>Pot_Player(?:64|32)_v(?<version>[\\d]{6})[(](?<build>[\\d.]+)[)]_(?:Public|Dev)_(?<date>[\\d]{6,8})\\.(?:zip|7z)))"
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/PotPlayer",
+        "regex": "(?s)(?<filename>PotPlayer(?:64|32)_v(?<version>[\\d]+)[(](?<build>[\\d.]+)[)]_(?:Dev)\\.(?:zip|7z))"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/$matchPath",
+                "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/$matchFilename",
                 "hash": {
-                    "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-                    "mode": "json",
-                    "jsonpath": "$.potplayer-dev.sha256hash"
+                    "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/PotPlayer",
+                    "mode": "extract",
+                    "regex": "^$sha256([\\s]+)$basename"
                 }
             }
         }

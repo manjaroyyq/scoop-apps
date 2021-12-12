@@ -36,13 +36,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/Music",
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/Music",
         "regex": "(?s)(?<filename>CloudMusic_v(?<version>([\\d.]+))\\.(?:7z|zip|rar))"
     },
     "autoupdate": {
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Music/$matchFilename",
         "hash": {
-            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/Music",
+            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/Music",
             "mode": "extract",
             "regex": "^$sha256([\\s]+)$basename"
         }

@@ -43,16 +43,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-        "jsonpath": "$.xshell.url",
-        "regex": "(?s)(?<path>Public/scoop/Xshell/(?<filename>Xshell_v(?<version>[\\d.]+)\\.(?:zip|7z)))"
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/XShell",
+        "regex": "(?<filename>Xshell_v(?<version>[\\d.]+)\\.(?:zip|7z))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/$matchPath",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/XShell/$matchFilename",
         "hash": {
-            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-            "mode": "json",
-            "jsonpath": "$.xshell.sha256hash"
+            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/XShell",
+            "mode": "extract",
+            "regex": "^$sha256([\\s]+)$basename"
         }
     }
 }

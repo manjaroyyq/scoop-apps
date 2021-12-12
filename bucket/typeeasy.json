@@ -40,13 +40,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/TypeEasy",
-        "regex": "(?s)(?<filename>金山打字通_(?<version>([\\d.]+))_去广告优化版-(?<date>([\\d])+)\\.(?:7z|zip|rar))"
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/TypeEasy",
+        "regex": "(?s)(?<filename>TypeEasy_(?<version>([\\d.]+))_NoAD-(?<date>([\\d])+)\\.(?:7z|zip|rar))"
     },
     "autoupdate": {
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/TypeEasy/$matchFilename",
         "hash": {
-            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/TypeEasy",
+            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/TypeEasy",
             "mode": "extract",
             "regex": "^$sha256([\\s]+)$basename"
         }

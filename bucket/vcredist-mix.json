@@ -7,17 +7,17 @@
         "基于 roustar31 的原始脚本接盘更新，32+64 位合集，WinXP~Win11 自动判断",
         "删除安装包 (不建议) 'scoop uninstall vcredist-mix'"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/vcredist/微软常用运行库合集_2021.12.07.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/vcredist/vcredist_mix_2021.12.07.exe",
     "hash": "007335a0d888d289dc5fffc7b74888a2cc9403ddc94a2661bbbddb62de99a538",
     "post_install": "Start-Process -FilePath \"$dir\\vcredist.exe\" -ArgumentList '/silent' -Verb RunAs",
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/vcredist",
-        "regex": "(?s)(?<filename>微软常用运行库合集_(?<version>([\\d.]+))\\.(?:exe|7z))"
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/vcredist",
+        "regex": "(?s)(?<filename>vcredist_mix_(?<version>([\\d.]+))\\.(?:exe|7z))"
     },
     "autoupdate": {
         "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/vcredist/$matchFilename",
         "hash": {
-            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/vcredist",
+            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/vcredist",
             "mode": "extract",
             "regex": "^$sha256([\\s]+)$basename"
         }

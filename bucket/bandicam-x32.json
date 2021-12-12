@@ -35,16 +35,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-        "jsonpath": "$.bandicam-32bit.url",
-        "regex": "(?s)(?<path>Public/scoop/Bandicam/(?<filename>Bandicam_v(?<version>[\\d.]+)_x(?:32|64)\\.(?:zip|7z)))"
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/Bandicam",
+        "regex": "(?s)(?<filename>Bandicam_v(?<version>[\\d.]+)_x(?:32)\\.(?:zip|7z))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/$matchPath",
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandicam/$matchFilename",
         "hash": {
-            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/version/version",
-            "mode": "json",
-            "jsonpath": "$.bandicam-32bit.sha256hash"
+            "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/Bandicam",
+            "mode": "extract",
+            "regex": "^$sha256([\\s]+)$basename"
         }
     }
 }
