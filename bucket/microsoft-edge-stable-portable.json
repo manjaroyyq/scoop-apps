@@ -40,23 +40,25 @@
         "Cache"
     ],
     "checkver": {
-        "url": "https://edgeupdates.microsoft.com/api/products",
-        "jsonpath": "$[?(@.Product == 'Stable')].Releases[?(@.Platform == 'Windows' && @.Architecture == 'x64')].ProductVersion"
+        "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/msedge",
+        "regex": "(?sm)stable.+\"Version\": \"(?<version>[\\d.]+).+MicrosoftEdge_X86_.+Location\": \"http://(?<fir>.*?)\".+MicrosoftEdge_X64_.+Location\": \"http://(?<sec>.*?)\".+beta"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=64&channel=stable&dl#/MicrosoftEdge-$version-x64.7z",
+                "url": "http://$matchSec#/MicrosoftEdge-$version-x64.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=64&channel=stable",
-                    "jsonpath": "$.Hashes.Sha256"
+                    "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/msedge",
+                    "mode": "json",
+                    "jsonpath": "$[?(@.Product == 'stable')].Release[?(@.Architecture == 'x64')].Hash"
                 }
             },
             "32bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=86&channel=stable&dl#/MicrosoftEdge-$version-x86.7z",
+                "url": "http://$matchFir#/MicrosoftEdge-$version-x86.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=86&channel=stable",
-                    "jsonpath": "$.Hashes.Sha256"
+                    "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/msedge",
+                    "mode": "json",
+                    "jsonpath": "$[?(@.Product == 'stable')].Release[?(@.Architecture == 'x86')].Hash"
                 }
             }
         }
