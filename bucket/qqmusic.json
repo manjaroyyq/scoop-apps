@@ -11,7 +11,7 @@
         "反汇编处理，去我的音乐页面右侧广告及歌单页面右侧广告",
         "去组件检测上报行为，删除 QQMusicUp.exe, QQMusicExternal.exe",
         "禁止检测升级，去后续提示版本过低无法使用限制，去菜单检测更新",
-        "禁止在系统后台 %AppData%	encent 里生成产品日志 logs 文件夹",
+        "禁止在系统后台 %AppData%    encent 里生成产品日志 logs 文件夹",
         "删除无用的辅助程序，电脑管家下载、在线升级程序(已脱离)等文件"
     ],
     "url": [
@@ -21,8 +21,8 @@
     ],
     "hash": [
         "cac9bb98fce0fb85af4d30577394148030f1559bff2b6076a53304dfa5cfa999",
-        "dbdd824c405afde63eb8f88543e0ce1fd10647e9d02b06dbc3e7a691d28f8735",
-        "2ced502c19243bb37ec8d6aa009632e8dbd7709e0305f572801470b0017845ec"
+        "2ced502c19243bb37ec8d6aa009632e8dbd7709e0305f572801470b0017845ec",
+        "dbdd824c405afde63eb8f88543e0ce1fd10647e9d02b06dbc3e7a691d28f8735"
     ],
     "extract_dir": "QQMusic",
     "installer": {
