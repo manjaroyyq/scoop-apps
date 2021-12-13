@@ -1,16 +1,16 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "The chromium based Microsoft Edge browser(Stable Channel, Portable Edition).",
-    "version": "96.0.1054.34",
+    "version": "96.0.1054.53",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=stable&dl#/MicrosoftEdge-96.0.1054.34-x64.7z",
-            "hash": "9ba71bbd10a791d053920fee8742b58b444c2f20bc0dc7ecb3322ace8997762f"
+            "url": "http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/6db6d962-d2fa-4475-a564-51d72ef1e761?P1=1639988790&P2=404&P3=2&P4=U6U3bmv6eOibQdgXM4UYnakGOphtVS1SeG7PmxvLIEzNyHfk5kd8O2HZQy%2fZ6ocDDsuwcg%2b56CpSAyISdjXE2w%3d%3d#/MicrosoftEdge-96.0.1054.53-x64.7z",
+            "hash": "5a1b46388372ecf5d77e3d622e3d15eaae514841329778cc921245c9dd83489e"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=stable&dl#/MicrosoftEdge-96.0.1054.34-x86.7z",
-            "hash": "c4246269d1c1be63a744afcb09db8fc3041539903356e48412c0927005e0c1fa"
+            "url": "http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/e932fc00-2e7a-4b6c-8a23-265d86e91ff8?P1=1639988791&P2=404&P3=2&P4=Z0W0h%2brTFosvrIrs2fAxM20NW486UHTI1XxaSgqJSr8IXNVQZs2%2bm876QffALMxKaS3ufzEeJJX31fmXrOcvGQ%3d%3d#/MicrosoftEdge-96.0.1054.53-x86.7z",
+            "hash": "ce7b43515ab09e303e47073db9958e8aa0492635bd81d05fc2a2ee6d7ae7eda0"
         }
     },
     "installer": {
