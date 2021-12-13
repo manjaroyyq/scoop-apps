@@ -3,13 +3,19 @@
     "description": "The chromium based Microsoft Edge browser(Dev Channel, Portable Edition).",
     "version": "98.0.1093.6",
     "license": "Freeware",
+    "notes": [
+        "If you encounter \"URL is not valid. The remote server returned an error: (308) Permanent Redirect.\" error",
+        "Please utilize aria2 to use multi-connection downloads.",
+        "   scoop install aria2",
+        "   scoop config aria2-warning-enabled true"
+    ],
     "architecture": {
         "64bit": {
-            "url": "http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/bb75a372-e1b8-4ec3-ad30-88f68e1bf1ad?P1=1639988793&P2=404&P3=2&P4=DcK4QnvX1Fq7AfFerhAyTUprYmVpQ1wurIW5EMniwmE%2fE7qlzHCAVfQBaWhesvX8VWjFP0GLVhyKJHxN5Gs4dw%3d%3d#/MicrosoftEdge-98.0.1093.6-x64.7z",
+            "url": "https://scoop-apps-version.vercel.app/msedge-dev-win-X64#/dl.7z",
             "hash": "9c4b56a6f926d060172e0fff5e0a26cce7604840f3fce61896bb22d6ad393617"
         },
         "32bit": {
-            "url": "http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/aeda03ed-cb48-47d4-840d-727831f88e55?P1=1639988794&P2=404&P3=2&P4=cIwl4uAhXizRheqnHlRXzheYK8PXuEYm10%2bzMFO6Pn0fX90PUQUe8Gsx9QBSGOyM7k4b06cySh1%2btZcEtXt84A%3d%3d#/MicrosoftEdge-98.0.1093.6-x86.7z",
+            "url": "https://scoop-apps-version.vercel.app/msedge-dev-win-X86#/dl.7z",
             "hash": "ffac6adcebc814f6c961dc756101f8b6ddf8b5374101df954db7609a0f2d3e31"
         }
     },
@@ -41,12 +47,12 @@
     ],
     "checkver": {
         "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/msedge",
-        "regex": "(?sm)dev.+\"Version\": \"(?<version>[\\d.]+).+MicrosoftEdge_X86_.+Location\": \"http://(?<fir>.*?)\".+MicrosoftEdge_X64_.+Location\": \"http://(?<sec>.*?)\".+canary"
+        "jsonpath": "$[?(@.Product == 'dev')].Version"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://$matchSec#/MicrosoftEdge-$version-x64.7z",
+                "url": "https://scoop-apps-version.vercel.app/msedge-dev-win-X64#/dl.7z",
                 "hash": {
                     "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/msedge",
                     "mode": "json",
@@ -54,7 +60,7 @@
                 }
             },
             "32bit": {
-                "url": "http://$matchFir#/MicrosoftEdge-$version-x86.7z",
+                "url": "https://scoop-apps-version.vercel.app/msedge-dev-win-X86#/dl.7z",
                 "hash": {
                     "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/msedge",
                     "mode": "json",
