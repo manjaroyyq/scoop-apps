@@ -1,12 +1,12 @@
 {
-    "version": "21.0.1040.0",
+    "version": "21.0.1050.0",
     "description": "360 极速浏览器 X，全新 Chromium95 内核，64 位双核浏览器，性能更高，体验更佳",
     "homepage": "https://browser.360.cn/eex/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://down.360safe.com/cse/360csex_21.0.1040.0.exe#/dl.7z",
-            "hash": "37e400c8f72e6bcadfe6bfa1bd008961a6abf1a11b1f01b8ddff5a7324d56625"
+            "url": "https://down.360safe.com/cse/360csex_21.0.1050.0.exe#/dl.7z",
+            "hash": "2ead4a61b69cb0227517da5ade9ad158f858cc90e8fe1d6742884d5ddf06349e"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
