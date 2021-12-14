@@ -1,5 +1,5 @@
 {
-    "version": "2.11.6",
+    "version": "2.11.7",
     "description": "MouseInc是一款小巧好用的全局鼠标手势软件。郑重承诺永久免费，无广告，不扫描硬盘，不上传隐私。",
     "homepage": "https://shuax.com/project/mouseinc/",
     "license": "Freeware",
@@ -13,8 +13,8 @@
         "使用手册：https://docs.shuax.com/MouseInc/",
         "问题反馈：https://github.com/shuax/MouseInc.Settings/discussions"
     ],
-    "url": "https://update.shuax.com/MouseInc2.11.6.7z",
-    "hash": "8c6b2e49388ed261a8a21546676523f597fd2d4d838348c83238a6a493fd4311",
+    "url": "https://update.shuax.com/MouseInc2.11.7.7z",
+    "hash": "ae715dacce5d00d55cf52a7c976a71ca2c106be2b47514c3ab67b80952a0099b",
     "extract_dir": "MouseInc",
     "bin": [
         [
@@ -27,9 +27,7 @@
             "MouseInc"
         ]
     ],
-    "persist": [
-        "MouseInc.json"
-    ],
+    "persist": "MouseInc.json",
     "checkver": {
         "url": "https://scoop-apps-version.vercel.app/MouseInc",
         "jsonpath": "$.version"
