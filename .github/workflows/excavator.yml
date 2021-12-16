@@ -16,10 +16,10 @@ jobs:
         env:
           GITH_EMAIL: zxj@outlook.sg
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          SKIP_UPDATED: "1"    
+          SKIP_UPDATED: "1"
       - name: Excavator
         uses: ScoopInstaller/Scoop-GithubActions@main
         env:
           GITH_EMAIL: zxj@outlook.sg
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          SKIP_UPDATED: "1"    
+          SKIP_UPDATED: "1"
