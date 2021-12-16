@@ -1,21 +1,19 @@
 name: Excavator
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 */12 * * *"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   excavate:
     name: Excavator
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@main
-      - name: Excavate
-        uses: Ash258/Scoop-GithubActions@stable
+      - name: Excavator
+        uses: ScoopInstaller/Scoop-GithubActions@main
         env:
           GITH_EMAIL: zxj@outlook.sg
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          SKIP_UPDATED: "1"
-          SCOOP_BRANCH: main
-          
+          SKIP_UPDATED: "1"    
