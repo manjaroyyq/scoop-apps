@@ -24,7 +24,7 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/Pot_Player64_v211118(1.7.21566)_Public_211125.7z",
+                "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/PotPlayer64_v211118(1.7.21566)_Public.7z",
                 "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/potplayer/potplayer64-settings.reg"
             ],
             "hash": [
