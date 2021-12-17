@@ -1,0 +1,31 @@
+{
+    "version": "20210903",
+    "description": "查找适合自己当前网络环境的优选 cloudflare anycast IP",
+    "homepage": "https://github.com/badafans/better-cloudflare-ip",
+    "license": "Unlicense",
+    "notes": [
+        "本项目侧重于研究任播技术中丢包率与网速的相互关系，仅供学习使用",
+        "部分系统运行需要管理员权限：Start-Process -filepath \"$dir\\CF优选IP.bat\" -Verb RunAs -Wait"
+    ],
+    "url": "https://github.com/badafans/better-cloudflare-ip/releases/download/20210903/windows.zip",
+    "hash": "be5bb203eda0e2ae6324e604b611b53de1a5bed4ad3c0ebd768a545181d60aa0",
+    "extract_dir": "better-cloudflare-ip",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\resolve.txt\")) {",
+        "   Write-Host 'File resolve.txt does not exists. Creating.' -f Yellow",
+        "   New-Item \"$dir\\resolve.txt\" -ItemType File | Out-Null",
+        "}"
+    ],
+    "bin": "CF优选IP.bat",
+    "shortcuts": [
+        [
+            "CF优选IP.bat",
+            "Cloudflare 优选 IP"
+        ]
+    ],
+    "persist": "resolve.txt",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/badafans/better-cloudflare-ip/releases/download/$version/windows.zip"
+    }
+}
