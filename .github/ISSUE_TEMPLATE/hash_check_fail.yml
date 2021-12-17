@@ -10,7 +10,7 @@ body:
       value: |
         Thanks for taking the time to submit you issue using the following template!
   - type: textarea
-    id: terminal output
+    id: terminal-output
     attributes:
       label: Terminal Output
       description: "Copy terminal output and paste it."

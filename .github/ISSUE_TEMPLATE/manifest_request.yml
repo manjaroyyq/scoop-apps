@@ -64,14 +64,14 @@ body:
     validations:
       required: false
   - type: input
-    id: graphical interface
+    id: graphical-interface
     attributes:
       label: Graphical interface
       placeholder: Yes/No
     validations:
       required: true
   - type: input
-    id: portable version
+    id: portable-version
     attributes:
       label: Portable version
       description: "if Yes please specify if portable mode needs to be enabled and list files/folders needed to be handled on update"
