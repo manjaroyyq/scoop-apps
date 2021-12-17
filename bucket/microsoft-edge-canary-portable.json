@@ -1,7 +1,7 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "The chromium based Microsoft Edge browser(Dev Channel, Portable Edition).",
-    "version": "98.0.1105.0",
+    "version": "98.0.1106.0",
     "license": "Freeware",
     "notes": [
         "If you encounter \"URL is not valid. The remote server returned an error: (308) Permanent Redirect.\" error",
@@ -12,11 +12,11 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-apps-version.vercel.app/msedge-canary-win-X64#/dl.7z",
-            "hash": "10d2e23abd2ff2a77706167fd8fc53db387d3ab09ebd597f7cdc32395a477854"
+            "hash": "4d78557116f9ab379505b99f588402e1e138364a65a49b159c8befb0003975cb"
         },
         "32bit": {
             "url": "https://scoop-apps-version.vercel.app/msedge-canary-win-X86#/dl.7z",
-            "hash": "64339cd3cc88cf62e512d4b0a9042204616a2fa5da5fb71f486d089769923cb6"
+            "hash": "a6b03862df3d58a74fc56afe744c06d6a1b86a0b3104638d3cbaf486962e682f"
         }
     },
     "installer": {
