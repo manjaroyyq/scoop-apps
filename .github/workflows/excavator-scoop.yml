@@ -1,4 +1,4 @@
-name: Excavator ScoopInstaller/Scoop-GithubActions@main
+name: Excavator ScoopInstaller
 on:
   schedule:
     - cron: "10 */12 * * *"

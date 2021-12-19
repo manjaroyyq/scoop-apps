@@ -1,7 +1,7 @@
-name: Excavator shovel-org/GithubActions@main
+name: Excavator
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "10 */6 * * *"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
