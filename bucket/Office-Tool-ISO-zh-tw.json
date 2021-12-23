@@ -1,16 +1,16 @@
 {
-    "version": "16.0.14701.20248",
+    "version": "16.0.14701.20262",
     "description": "Offline installation package contains Office Tool Plus(Traditional Chinese Edition).",
     "homepage": "https://download.coolhub.top",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://download.coolhub.top/Office_ISO/zh-TW/Current/Office_Tool_Plus_16.0.14701.20248_x64_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
-            "hash": "bd90f889103dbcda67296385cecd51bb46c4653a27f8a3d3160f1fd7d221e63d"
+            "url": "https://download.coolhub.top/Office_ISO/zh-TW/Current/Office_Tool_Plus_16.0.14701.20262_x64_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
+            "hash": "d5dab8311c7f1aa5feb5d184f0e5279acc8408e9bdb8c0d6ef87ea301a8199b1"
         },
         "32bit": {
-            "url": "https://download.coolhub.top/Office_ISO/zh-TW/Current/Office_Tool_Plus_16.0.14701.20248_x86_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
-            "hash": "ecc7f657d4800d394bfd93777f47785f65fbec21b0fbcc4598d458c756df3274"
+            "url": "https://download.coolhub.top/Office_ISO/zh-TW/Current/Office_Tool_Plus_16.0.14701.20262_x86_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
+            "hash": "b29641e1ef6611bacacfb3024ae9e5ade24dc28aa2d9820043b29289b674e83e"
         }
     },
     "shortcuts": [
