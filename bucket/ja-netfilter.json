@@ -1,14 +1,14 @@
 {
-    "version": "1.2.0",
+    "version": "2.0.0",
     "description": "A javaagent framework",
     "homepage": "https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html",
     "license": "GPL-3.0-only",
     "url": [
-        "https://github.com/ja-netfilter/ja-netfilter/releases/download/v1.2.0/ja-netfilter-v1.2.0.zip",
+        "https://github.com/ja-netfilter/ja-netfilter/releases/download/v2.0.0/ja-netfilter-v2.0.0.zip",
         "https://pan.jiemi.workers.dev/?file=/Public/scoop/patch/plugins/mymap.jar"
     ],
     "hash": [
-        "38bc132705c54cf333ffae05b540cdeefee9a067af4c1438574ba3ee6a5554aa",
+        "c8698a3c631da476fa9e2fa20707a328f6269944ecc64de55e4a2e9f3017bb0c",
         "2a20c5f9a05820f522d9338c57aeac51232422af87ac299c3bb541e948549774"
     ],
     "extract_dir": "ja-netfilter",
