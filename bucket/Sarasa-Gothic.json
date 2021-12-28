@@ -1,12 +1,12 @@
 {
-    "version": "0.35.6",
+    "version": "0.35.7",
     "description": "This is SARASA GOTHIC, a CJK programming font based on Iosevka and Source Han Sans.",
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
     "license": "SIL Open Font License",
     "notes": "You may need to restart the system to use recently installed fonts.",
     "depends": "sudo",
-    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.35.6/sarasa-gothic-ttf-0.35.6.7z",
-    "hash": "eeb67c8988993979f173af025d47dc2e1e05004c62104764ff1588357fef9095",
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.35.7/sarasa-gothic-ttf-0.35.7.7z",
+    "hash": "6ded24b0115fa955c27ab69fea7faa26953549e74d63d5c1766134f1fa5c896a",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
