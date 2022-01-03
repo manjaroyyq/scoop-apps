@@ -1,0 +1,32 @@
+{
+    "version": "4d502075",
+    "description": "ja-netfilter all in one",
+    "homepage": "https://jetbra.in/s",
+    "license": "GPL-3.0-only",
+    "notes": "Configure as described in readme.txt! For testing purposes only, not for commercial use!",
+    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/patch/ja-netfilter-all-4d502075179cd4a69ff30578e33591b46aecf6ea.zip",
+    "hash": "d0b000d0c0cb6fb5c898d0c38b433e6fc5c8faf1f9f09bf0522d5b20b075cb33",
+    "extract_dir": "ja-netfilter-all",
+    "pre_install": [
+        "Set-Content \"$dir\\ja-netfilter-all-install.ps1\" @('Set-Location $env:SCOOP_APPS/ja-netfilter-all/current/scripts/', 'Start-Process -FilePath install.vbs -Wait') -Encoding Ascii",
+        "Set-Content \"$dir\\ja-netfilter-all-uninstall.ps1\" @('Set-Location $env:SCOOP_APPS/ja-netfilter-all/current/scripts/', 'Start-Process -FilePath uninstall.vbs -Wait') -Encoding Ascii"
+    ],
+    "bin": [
+        "ja-netfilter-all-install.ps1",
+        "ja-netfilter-all-uninstall.ps1"
+    ],
+    "checkver": {
+        "url": "https://github.com/JaimeZeng/scoop-apps-version/raw/main/patch",
+        "regex": "(?s)(?<filename>ja-netfilter-all-(?<Sha>(?<short>[a-fA-F0-9]{8})[a-fA-F0-9]{32})\\.(?:zip|7z))",
+        "replace": "${short}",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/patch/$matchFilename",
+        "hash": {
+            "url": "https://github.com/JaimeZeng/scoop-apps-version/raw/main/patch",
+            "mode": "extract",
+            "regex": "^$sha256([\\s]+)$basename"
+        }
+    }
+}

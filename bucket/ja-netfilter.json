@@ -9,30 +9,24 @@
     ],
     "hash": [
         "f4ae9e8837893e70ece13b2555512b1fb97d0b69860598e916e99913b2e67be3",
-        "2a20c5f9a05820f522d9338c57aeac51232422af87ac299c3bb541e948549774"
+        "48f627919c46ec345119b05afbd18b2a443d47223533f21a64792302ffcd223d"
     ],
     "extract_dir": "ja-netfilter",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\janf_config.txt\")) { New-Item -Path \"$dir\" -Name \"janf_config.txt\" -ItemType File | Out-Null }",
+        "foreach ($config in @('mymap.conf', 'url.conf', 'dns.conf')) {",
+        "    if (!(Test-Path \"$dir\\config\\$config\")) {",
+        "        New-Item -Path \"$dir\\config\" -Name \"$config\" -ItemType File | Out-Null ",
+        "    }",
+        "}",
+        "Set-Content \"$dir\\config\\dns.conf\" @('[DNS]', 'EQUAL,jetbrains.com') -Encoding Ascii",
+        "Set-Content \"$dir\\config\\url.conf\" @('[URL]', 'PREFIX,https://dbeaver.com/lmp/checkLicense', 'PREFIX,https://store.smartgit.com/check', 'PREFIX,https://account.jetbrains.com/lservice/rpc/validateKey.action') -Encoding Ascii",
         "$cont = @(",
-        "    '[DNS]'",
-        "    'EQUAL,jetbrains.com'",
-        "    ''",
-        "    '[URL]'",
-        "    '# SmartGit'",
-        "    'PREFIX,https://store.smartgit.com/check'",
-        "    '# DBEaverEE'",
-        "    'PREFIX,https://dbeaver.com/lmp/checkLicense'",
-        "    '# JetBrains'",
-        "    'PREFIX,https://account.jetbrains.com/lservice/rpc/validateKey.action'",
-        "    ''",
         "    '[MyMap]'",
         "    \"EQUAL,licenseeName->$env:USERNAME\"",
         "    'EQUAL,gracePeriodDays->100000'",
         "    'EQUAL,paidUpTo->2022-12-31'",
         ")",
-        "Set-Content \"$dir\\janf_config.txt\" -Value $cont -Encoding Ascii",
-        "New-Item -Path \"$dir\" -Name \"plugins\" -ItemType Directory -Force",
+        "Set-Content \"$dir\\config\\mymap.conf\" -Value $cont -Encoding Ascii",
         "foreach ($name in @('mymap.jar')) {",
         "    Move-Item -Path \"$dir\\$name\" -Destination \"$dir\\plugins\" -Force",
         "}"
@@ -44,7 +38,6 @@
         "$text = \"$text `r`n JetBrains:  IDE Menu -> Help -> Edit Custom VM Options\"",
         "warn $text"
     ],
-    "persist": "janf_config.txt",
     "checkver": {
         "github": "https://github.com/ja-netfilter/ja-netfilter/"
     },
