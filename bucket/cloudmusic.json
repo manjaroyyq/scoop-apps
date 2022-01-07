@@ -12,7 +12,7 @@
         "- 切断强制升级，无视选项升级开关，禁后续检测升级提示下载安装包"
     ],
     "url": [
-        "https://pan.jiemi.workers.dev/?file=/Public/scoop/Music/CloudMusic_v2.9.6.199543.7z",
+        "https://pan.jiemi.workers.dev/?file=/scoop/Music/CloudMusic_v2.9.6.199543.7z",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/cloudmusic/uninstall.bat"
     ],
     "hash": [
@@ -40,7 +40,7 @@
         "regex": "(?s)(?<filename>CloudMusic_v(?<version>([\\d.]+))\\.(?:7z|zip|rar))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Music/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/Music/$matchFilename",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/Music",
             "mode": "extract",

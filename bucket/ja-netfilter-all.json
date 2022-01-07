@@ -4,7 +4,7 @@
     "homepage": "https://jetbra.in/s",
     "license": "GPL-3.0-only",
     "notes": "Configure as described in readme.txt! For testing purposes only, not for commercial use!",
-    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/patch/ja-netfilter-all-4d502075179cd4a69ff30578e33591b46aecf6ea.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/ja-netfilter-all-4d502075179cd4a69ff30578e33591b46aecf6ea.zip",
     "hash": "d0b000d0c0cb6fb5c898d0c38b433e6fc5c8faf1f9f09bf0522d5b20b075cb33",
     "extract_dir": "ja-netfilter-all",
     "pre_install": [
@@ -22,7 +22,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/patch/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/$matchFilename",
         "hash": {
             "url": "https://github.com/JaimeZeng/scoop-apps-version/raw/main/patch",
             "mode": "extract",

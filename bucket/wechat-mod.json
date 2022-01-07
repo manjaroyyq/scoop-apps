@@ -16,7 +16,7 @@
         "反编永久禁止检测到新版本后自动升级；",
         "仿官方安装模式 UI 界面，可选随机启动、多开器、卸载可选清除记录。"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/QQ/WeChat_v3.4.5.45_QiuQuan_20211230.exe#/Installer.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/QQ/WeChat_v3.4.5.45_QiuQuan_20211230.exe#/Installer.exe",
     "hash": "1d9edd06b81624dbdd5aef4076a2f7dfc72013fc55981c2ec51e762beb8a7862",
     "pre_install": "Start-Process -FilePath \"$dir\\Installer.exe\" -ArgumentList /DIR=\"$dir\",/SILENT -Wait",
     "post_install": "Remove-Item $dir\\Installer.exe -Force",
@@ -44,7 +44,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/QQ/$matchFilename#/Installer.exe",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/QQ/$matchFilename#/Installer.exe",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/QQ",
             "mode": "extract",

@@ -7,7 +7,7 @@
         "url": "https://www.wisecleaner.com/eula.html"
     },
     "depends": "sudo",
-    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/CCleaner/WiseCare365_6.1.4.601_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/CCleaner/WiseCare365_6.1.4.601_Green.7z",
     "hash": "f0d9540a44360137e8ebacbefb7212474397011630b7cc112648d993a585896b",
     "extract_dir": "WiseCare365_6.1.4.601_Green",
     "uninstaller": {
@@ -34,7 +34,7 @@
         "regex": "(?<filename>WiseCare365_(?<version>[\\d.]+)_Green\\.(?:zip|7z))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/CCleaner/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/CCleaner/$matchFilename",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/CCleaner",
             "mode": "extract",

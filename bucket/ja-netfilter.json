@@ -5,7 +5,7 @@
     "license": "GPL-3.0-only",
     "url": [
         "https://github.com/ja-netfilter/ja-netfilter/releases/download/v2.0.1/ja-netfilter-v2.0.1.zip",
-        "https://pan.jiemi.workers.dev/?file=/Public/scoop/patch/plugins/mymap.jar"
+        "https://pan.jiemi.workers.dev/?file=/scoop/patch/plugins/mymap.jar"
     ],
     "hash": [
         "f4ae9e8837893e70ece13b2555512b1fb97d0b69860598e916e99913b2e67be3",

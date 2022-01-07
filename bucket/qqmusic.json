@@ -15,7 +15,7 @@
         "删除无用的辅助程序，电脑管家下载、在线升级程序(已脱离)等文件"
     ],
     "url": [
-        "https://pan.jiemi.workers.dev/?file=/Public/scoop/Music/QQMusic_v18.44_NoAD_Portable.7z",
+        "https://pan.jiemi.workers.dev/?file=/scoop/Music/QQMusic_v18.44_NoAD_Portable.7z",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/qqmusic/install.bat",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/qqmusic/uninstall.bat"
     ],
@@ -48,7 +48,7 @@
         "regex": "(?s)(?<filename>QQMusic_v(?<version>([\\d.]+)).*?\\.(?:7z|zip|rar))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Music/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/Music/$matchFilename",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/Music",
             "mode": "extract",

@@ -24,7 +24,7 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/PotPlayer64_v211207(1.7.21568)_Dev.7z",
+                "https://pan.jiemi.workers.dev/?file=/scoop/PotPlayer/PotPlayer64_v211207(1.7.21568)_Dev.7z",
                 "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/potplayer/potplayer64-settings.reg"
             ],
             "hash": [
@@ -58,7 +58,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/PotPlayer/$matchFilename",
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/PotPlayer/$matchFilename",
                 "hash": {
                     "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/PotPlayer",
                     "mode": "extract",

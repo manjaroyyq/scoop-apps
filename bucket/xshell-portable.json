@@ -11,7 +11,7 @@
         "用户下载后不能用作商业或非法用途，需在 24 小时之内删除，否则后果均由用户承担责任。"
     ],
     "url": [
-        "https://pan.jiemi.workers.dev/?file=/Public/scoop/Xshell/Xshell_v7.0.0090.7z",
+        "https://pan.jiemi.workers.dev/?file=/scoop/Xshell/Xshell_v7.0.0090.7z",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/xshell/install.bat",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/xshell/uninstall.bat"
     ],
@@ -47,7 +47,7 @@
         "regex": "(?<filename>Xshell_v(?<version>[\\d.]+)\\.(?:zip|7z))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/XShell/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/XShell/$matchFilename",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/version/XShell",
             "mode": "extract",

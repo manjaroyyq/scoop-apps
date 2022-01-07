@@ -24,7 +24,7 @@
         "☑ 删除垃圾文件：今日看点、游戏程序、爱奇艺客户端插件、自动升级、错误报告等"
     ],
     "url": [
-        "https://pan.jiemi.workers.dev/?file=/Public/scoop/Music/KuWo_v9.1.1.6-W4_NoAD_Portable.7z",
+        "https://pan.jiemi.workers.dev/?file=/scoop/Music/KuWo_v9.1.1.6-W4_NoAD_Portable.7z",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/kuwo/install.bat",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/kuwo/uninstall.bat"
     ],
@@ -57,7 +57,7 @@
         "regex": "(?s)(?<filename>KuWo_v(?<version>([\\d.]+)).*?\\.(?:7z|zip|rar))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Music/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/Music/$matchFilename",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/Music",
             "mode": "extract",

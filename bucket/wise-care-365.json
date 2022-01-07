@@ -21,7 +21,7 @@
         "默认设置不显示悬浮窗口；",
         "默认设置关闭主窗口后退出托盘图标。"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/CCleaner/Wise_Care_365_6.1.4.601-20211211.exe#/Installer.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/CCleaner/Wise_Care_365_6.1.4.601-20211211.exe#/Installer.exe",
     "hash": "681437f8429fa9dbfc9804aec5af7cdaae2ba46e59e0820a7233d393885d5b36",
     "pre_install": "Start-Process -FilePath \"$dir\\Installer.exe\" -ArgumentList /DIR=\"$dir\",/SILENT -Wait",
     "post_install": "Remove-Item $dir\\Installer.exe -Force",
@@ -40,7 +40,7 @@
         "regex": "(?<filename>Wise_Care_365_(?<version>[\\d.]+).*?\\.exe)"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/CCleaner/$matchFilename#/Installer.exe",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/CCleaner/$matchFilename#/Installer.exe",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/CCleaner",
             "mode": "extract",

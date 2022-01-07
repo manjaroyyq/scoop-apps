@@ -20,7 +20,7 @@
         "",
         "最新版下载地址：<https://www.423down.com/2119.html>"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandicam/Bandicam_v5.1.1.1837_x32.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/Bandicam/Bandicam_v5.1.1.1837_x32.7z",
     "hash": "72e3f909b911b1d923dfd5195add1033e2d6da8ac54a2d4ffce77f8a5de50bc8",
     "extract_dir": "Bandicam",
     "bin": [
@@ -39,7 +39,7 @@
         "regex": "(?s)(?<filename>Bandicam_v(?<version>[\\d.]+)_x(?:32)\\.(?:zip|7z))"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/Bandicam/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/Bandicam/$matchFilename",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/Bandicam",
             "mode": "extract",

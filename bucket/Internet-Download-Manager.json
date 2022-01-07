@@ -8,7 +8,7 @@
         "IDM 自定义设置: \"$dir\\idm-custom-settings.reg\""
     ],
     "url": [
-        "https://pan.jiemi.workers.dev/?file=/Public/scoop/IDM/IDM_v6.40.2_Retail_Repack_Elchupacabra.7z",
+        "https://pan.jiemi.workers.dev/?file=/scoop/IDM/IDM_v6.40.2_Retail_Repack_Elchupacabra.7z",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/idm/install.bat",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/idm/uninstall.bat",
         "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/idm/idm-custom-settings.reg"
@@ -48,7 +48,7 @@
         "regex": "(?<filename>IDM_v(?<version>[\\d.]+).*?\\.7z)"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/IDM/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/IDM/$matchFilename",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/IDM",
             "mode": "extract",

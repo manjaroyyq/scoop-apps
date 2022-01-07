@@ -10,7 +10,7 @@
     "suggest": {
         "DirectX_Repair": "sapps/DirectX_Repair"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/OCR/tianruoocr-cl_V1.3.0.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/OCR/tianruoocr-cl_V1.3.0.7z",
     "hash": "eb9d1d0e500592bdac39fa2b81969e62702ed8b5f9d9cf65788415ebe36cbc72",
     "extract_dir": "天若OCR开源版本地版",
     "bin": "天若OCR文字识别.exe",
@@ -25,7 +25,7 @@
         "regex": "v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/Public/scoop/OCR/tianruoocr-cl_V$version.7z",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/OCR/tianruoocr-cl_V$version.7z",
         "hash": {
             "url": "https://raw.githubusercontent.com/JaimeZeng/scoop-apps-version/main/OCR",
             "mode": "extract",
